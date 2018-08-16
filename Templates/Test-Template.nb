@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3920,        109]
+NotebookOptionsPosition[      2949,         86]
+NotebookOutlinePosition[      3511,        106]
+CellTagsIndexPosition[      3468,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"string1\"","\"string1\"","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "98234aea-d19a-4c8d-9f3c-54e4818a2284"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-ca2a00927ff1"],
+
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"int1\"","1","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "2d2d6c14-6c1c-4d63-a21d-6c792cf92d6f"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"f6179f5b-efe7-4128-859a-cfece3844546"],
+
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"string2\"","\"string2\"","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "df3349a8-3776-4443-b865-01cb3c2dccc7"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"e29b57db-c456-4db3-b2c9-e47cf9b2a709"],
+
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"int2\"","2","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "92617837-21bf-43e4-b3d2-54a4ed5a6d3f"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"21350a69-8a07-480d-a46d-18be6ad88750"],
+
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"1\"","1","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "66fc47c8-9375-4fd7-81fc-895ceb27afac"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"748c9977-73ae-4dc6-8968-b17c3a0cae17"],
+
+Cell[BoxData[Cell[BoxData[
+  FormBox[
+   TemplateBox[{"\"2\"","2","Named",BoxData},
+    "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
+  "367844da-10c8-45d1-9352-4f50dfbb3436"]], "Input",
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
+   None, None}},ExpressionUUID->"f9fd82b2-b4d3-48d3-8866-d4ea0f82ada9"]
+},
+WindowSize->{775, 872},
+WindowMargins->{{527, Automatic}, {Automatic, 134}},
+DockedCells->FEPrivate`FrontEndResource[
+ "NotebookTemplatingExpressions", "AuthoringDockedCell"],
+TaggingRules->{"NotebookTemplateVersion" -> 1., "NotebookTemplate" -> True},
+CellContext->Notebook,
+ShowCellTags->True,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"BStyle.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 405, 9, 43, "Input",ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-ca2a00927ff1"],
+Cell[966, 31, 392, 9, 43, "Input",ExpressionUUID->"f6179f5b-efe7-4128-859a-cfece3844546"],
+Cell[1361, 42, 405, 9, 43, "Input",ExpressionUUID->"e29b57db-c456-4db3-b2c9-e47cf9b2a709"],
+Cell[1769, 53, 392, 9, 43, "Input",ExpressionUUID->"21350a69-8a07-480d-a46d-18be6ad88750"],
+Cell[2164, 64, 389, 9, 43, "Input",ExpressionUUID->"748c9977-73ae-4dc6-8968-b17c3a0cae17"],
+Cell[2556, 75, 389, 9, 43, "Input",ExpressionUUID->"f9fd82b2-b4d3-48d3-8866-d4ea0f82ada9"]
+}
+]
+*)
+
