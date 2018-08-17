@@ -10,35 +10,41 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3920,        109]
-NotebookOptionsPosition[      2949,         86]
-NotebookOutlinePosition[      3511,        106]
-CellTagsIndexPosition[      3468,        103]
+NotebookDataLength[      4076,        116]
+NotebookOptionsPosition[      3090,         92]
+NotebookOutlinePosition[      3664,        113]
+CellTagsIndexPosition[      3621,        110]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[Cell[BoxData[
   FormBox[
-   TemplateBox[{"\"string1\"","\"string1\"","Named",BoxData},
+   TemplateBox[{"\"string1\"","\"stringD1\"","Named",BoxData},
     "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
-  "98234aea-d19a-4c8d-9f3c-54e4818a2284"]], "Input",
+  "c3bd1ddd-c4da-434d-9360-d8551cada6a7"]], "Input",
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
-   None, None}},ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-ca2a00927ff1"],
+   None, None}},
+ CellChangeTimes->{{3.74341007011868*^9, 
+  3.743410077368469*^9}},ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-\
+ca2a00927ff1"],
 
 Cell[BoxData[Cell[BoxData[
   FormBox[
    TemplateBox[{"\"int1\"","1","Named",BoxData},
     "NotebookTemplateSlot"], TextForm]],ExpressionUUID->
-  "2d2d6c14-6c1c-4d63-a21d-6c792cf92d6f"]], "Input",
+  "ca1339d6-485e-44c4-9c3c-38005e411d08"]], "Input",
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{"Unevaluated"}, "NotebookTemplateCellBehavior"]]], None}, {
-   None, None}},ExpressionUUID->"f6179f5b-efe7-4128-859a-cfece3844546"],
+   None, None}},
+ CellChangeTimes->{{3.74341007921469*^9, 
+  3.743410082755212*^9}},ExpressionUUID->"f6179f5b-efe7-4128-859a-\
+cfece3844546"],
 
 Cell[BoxData[Cell[BoxData[
   FormBox[
@@ -91,7 +97,8 @@ DockedCells->FEPrivate`FrontEndResource[
 TaggingRules->{"NotebookTemplateVersion" -> 1., "NotebookTemplate" -> True},
 CellContext->Notebook,
 ShowCellTags->True,
-FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"BStyle.nb"
 ]
 (* End of Notebook Content *)
@@ -105,12 +112,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 405, 9, 43, "Input",ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-ca2a00927ff1"],
-Cell[966, 31, 392, 9, 43, "Input",ExpressionUUID->"f6179f5b-efe7-4128-859a-cfece3844546"],
-Cell[1361, 42, 405, 9, 43, "Input",ExpressionUUID->"e29b57db-c456-4db3-b2c9-e47cf9b2a709"],
-Cell[1769, 53, 392, 9, 43, "Input",ExpressionUUID->"21350a69-8a07-480d-a46d-18be6ad88750"],
-Cell[2164, 64, 389, 9, 43, "Input",ExpressionUUID->"748c9977-73ae-4dc6-8968-b17c3a0cae17"],
-Cell[2556, 75, 389, 9, 43, "Input",ExpressionUUID->"f9fd82b2-b4d3-48d3-8866-d4ea0f82ada9"]
+Cell[558, 20, 476, 12, 43, "Input",ExpressionUUID->"d3da8eb6-0ae3-4b5d-9b05-ca2a00927ff1"],
+Cell[1037, 34, 462, 12, 43, "Input",ExpressionUUID->"f6179f5b-efe7-4128-859a-cfece3844546"],
+Cell[1502, 48, 405, 9, 43, "Input",ExpressionUUID->"e29b57db-c456-4db3-b2c9-e47cf9b2a709"],
+Cell[1910, 59, 392, 9, 43, "Input",ExpressionUUID->"21350a69-8a07-480d-a46d-18be6ad88750"],
+Cell[2305, 70, 389, 9, 43, "Input",ExpressionUUID->"748c9977-73ae-4dc6-8968-b17c3a0cae17"],
+Cell[2697, 81, 389, 9, 43, "Input",ExpressionUUID->"f9fd82b2-b4d3-48d3-8866-d4ea0f82ada9"]
 }
 ]
 *)
