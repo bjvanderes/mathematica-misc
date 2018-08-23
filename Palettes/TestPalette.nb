@@ -1,0 +1,1049 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     45688,       1041]
+NotebookOptionsPosition[     44110,       1005]
+NotebookOutlinePosition[     44490,       1021]
+CellTagsIndexPosition[     44447,       1018]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[RawData[""], NotebookDefault],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "$DefaultManagedTemplateDirectory", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$DefaultManagedTemplateDirectory", "=", " ", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+      "\"\<ManagedTemplates\>\""}], "}"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"ClearAll", "[", 
+  RowBox[{
+  "retrieveTemplateNotebooks", ",", "extractNotebookTemplateParameters", ",", 
+   "createNotebook", ",", "formTypeFromDefault", ",", 
+   "templateParameterForm"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"retrieveTemplateNotebooks", "[", 
+   RowBox[{"dirs__:", "$DefaultManagedTemplateDirectory"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"KeyMap", "[", "FileBaseName", "]"}], " ", "@", " ", 
+   RowBox[{"AssociationMap", "[", 
+    RowBox[{"NotebookTemplate", ",", " ", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<*.nb\>\"", ",", "dirs"}], "]"}]}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractNotebookTemplateParameters", "[", "Null", "]"}], "=", 
+   "Null"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractNotebookTemplateParameters", "[", 
+    RowBox[{"nb_TemplateObject:", 
+     RowBox[{
+      RowBox[{"First", "@*", "Values"}], "@", 
+      RowBox[{"retrieveTemplateNotebooks", "[", "]"}]}]}], "]"}], ":=", 
+   RowBox[{"Association", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", "#1", "]"}], "\[Rule]", " ", 
+        RowBox[{"ToExpression", "[", "#2", "]"}]}], ")"}], "&"}], "@@@", 
+     RowBox[{"Sort", "@", 
+      RowBox[{"Cases", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"NotebookGet", "@@", "nb"}], ")"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"TemplateBox", "[", 
+          RowBox[{"param_List", ",", " ", "\"\<NotebookTemplateSlot\>\""}], 
+          "]"}], " ", "\[RuleDelayed]", "  ", "param"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "Infinity"}], "}"}]}], "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"createNotebook", "[", 
+   RowBox[{"templateNb_TemplateObject", ",", "args_Association"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"SetOptions", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"Visible", "\[Rule]", "True"}]}], "]"}], ";", 
+      RowBox[{"NotebookSave", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"RelativeFilePath", "[", 
+         RowBox[{
+          RowBox[{"Lookup", "[", 
+           RowBox[{"args", ",", "\"\<name\>\"", ",", "\"\<new\>\""}], "]"}], 
+          " ", "<>", "\"\<.nb\>\""}], "]"}], ",", 
+        RowBox[{"Interactive", "\[Rule]", "True"}]}], "]"}]}], ")"}], "&"}], 
+   "[", 
+   RowBox[{"TemplateApply", "[", 
+    RowBox[{"templateNb", ",", "args"}], "]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"formTypeFromDefault", "[", 
+   RowBox[{"defVal_", "?", "NumberQ"}], "]"}], ":=", 
+  "\"\<Number\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"formTypeFromDefault", "[", "defVal_", "]"}], ":=", 
+  "\"\<String\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "templateParameterForm", "[", "templateObject_TemplateObject", "]"}], ":=", 
+  RowBox[{"FormFunction", "[", 
+   RowBox[{
+    RowBox[{"KeyValueMap", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#1", "\[Rule]", " ", 
+        RowBox[{
+         RowBox[{"formTypeFromDefault", "[", "#2", "]"}], "\[Rule]", " ", 
+         "#2"}]}], "&"}], ",", " ", 
+      RowBox[{
+      "extractNotebookTemplateParameters", "[", "templateObject", "]"}]}], 
+     "]"}], ",", 
+    RowBox[{
+     RowBox[{"Curry", "[", "createNotebook", "]"}], "[", "templateObject", 
+     "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AskFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<template\>\"", "\[Rule]", "  ", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<Interpreter\>\"", "\[Rule]", " ", 
+         RowBox[{"retrieveTemplateNotebooks", "[", "]"}]}], ",", 
+        RowBox[{"\"\<Input\>\"", "\[Rule]", " ", "Null"}], ",", 
+        RowBox[{"\"\<Required\>\"", "\[Rule]", "True"}], ",", 
+        RowBox[{"\"\<Control\>\"", "\[Rule]", "PopupMenu"}], ",", 
+        RowBox[{"\"\<AutoSubmitting\>\"", "\[Rule]", "True"}]}], "|>"}]}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"argsKvm", "=", 
+         RowBox[{"KeyValueMap", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<\\\"\>\"", "<>", "#1", "<>", "\"\<\\\"\>\""}], 
+             "\[Rule]", " ", 
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<Interpreter\>\"", "\[Rule]", " ", 
+                RowBox[{"formTypeFromDefault", "[", "#2", "]"}]}], ",", " ", 
+               RowBox[{"\"\<Default\>\"", "\[Rule]", "  ", "#2"}], ",", 
+               RowBox[{"\"\<Input\>\"", "\[Rule]", "  ", "#2"}]}], "|>"}]}], 
+            "&"}], ",", " ", 
+           RowBox[{"extractNotebookTemplateParameters", "[", 
+            RowBox[{"Ask", "[", "\"\<template\>\"", "]"}], "]"}]}], "]"}]}], 
+        "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Ask", "[", "\"\<templateArgs\>\"", "]"}], "=", 
+        RowBox[{"KeyMap", "[", 
+         RowBox[{"ToExpression", ",", 
+          RowBox[{"Ask", "[", "argsKvm", "]"}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"createNotebook", "[", 
+      RowBox[{
+       RowBox[{"Ask", "[", "\"\<template\>\"", "]"}], ",", 
+       RowBox[{"Ask", "[", "\"\<templateArgs\>\"", "]"}]}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}], "[", "]"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.7437428327093563`*^9, 3.7437428748494015`*^9}, 
+   3.7437429089124947`*^9, {3.7437430458668795`*^9, 3.743743050565831*^9}, 
+   3.743743097618539*^9, 
+   3.7437431927182627`*^9},ExpressionUUID->"6af79d0c-b3c1-42eb-ac7c-\
+1a87a1675b45"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pal1", "=", 
+   RowBox[{"CreateDocument", "[", 
+    RowBox[{"ExpressionCell", "[", 
+     RowBox[{
+      RowBox[{"Defer", "[", 
+       RowBox[{
+        RowBox[{"ClearAll", "[", "$DefaultManagedTemplateDirectory", "]"}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"$DefaultManagedTemplateDirectory", "=", " ", 
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{
+           "$$PaletteWorkingDirectory", ",", "\"\<ManagedTemplates\>\""}], 
+           "}"}], "]"}]}], ";", "\n", 
+        RowBox[{"ClearAll", "[", 
+         RowBox[{
+         "retrieveTemplateNotebooks", ",", 
+          "extractNotebookTemplateParameters", ",", "createNotebook", ",", 
+          "formTypeFromDefault"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"retrieveTemplateNotebooks", "[", 
+          RowBox[{"dirs__:", "$DefaultManagedTemplateDirectory"}], "]"}], ":=", 
+         RowBox[{
+          RowBox[{"KeyMap", "[", "FileBaseName", "]"}], " ", "@", " ", 
+          RowBox[{"AssociationMap", "[", 
+           RowBox[{"NotebookTemplate", ",", " ", 
+            RowBox[{"FileNames", "[", 
+             RowBox[{"\"\<*.nb\>\"", ",", "dirs"}], "]"}]}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"extractNotebookTemplateParameters", "[", "Null", "]"}], "=",
+          "Null"}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"extractNotebookTemplateParameters", "[", 
+          RowBox[{"nb_TemplateObject:", 
+           RowBox[{
+            RowBox[{"First", "@*", "Values"}], "@", 
+            RowBox[{"retrieveTemplateNotebooks", "[", "]"}]}]}], "]"}], ":=", 
+         RowBox[{"Association", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"ToExpression", "[", "#1", "]"}], "\[Rule]", " ", 
+              RowBox[{"ToExpression", "[", "#2", "]"}]}], ")"}], "&"}], "@@@", 
+           RowBox[{"Sort", "@", 
+            RowBox[{"Cases", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"NotebookGet", "@@", "nb"}], ")"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"TemplateBox", "[", 
+                RowBox[{
+                "param_List", ",", " ", "\"\<NotebookTemplateSlot\>\""}], 
+                "]"}], " ", "\[RuleDelayed]", "  ", "param"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "Infinity"}], "}"}]}], "]"}]}]}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"createNotebook", "[", 
+          RowBox[{"templateNb_TemplateObject", ",", "args_Association"}], 
+          "]"}], ":=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"SetOptions", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"Visible", "\[Rule]", "True"}]}], "]"}], ";", 
+             RowBox[{"NotebookSave", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"RelativeFilePath", "[", 
+                RowBox[{
+                 RowBox[{"Lookup", "[", 
+                  RowBox[{"args", ",", "\"\<name\>\"", ",", "\"\<new\>\""}], 
+                  "]"}], " ", "<>", "\"\<.nb\>\""}], "]"}], ",", 
+               RowBox[{"Interactive", "\[Rule]", "True"}]}], "]"}]}], ")"}], 
+           "&"}], "[", 
+          RowBox[{"TemplateApply", "[", 
+           RowBox[{"templateNb", ",", "args"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"formTypeFromDefault", "[", 
+          RowBox[{"defVal_", "?", "NumberQ"}], "]"}], ":=", 
+         "\"\<Number\>\""}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"formTypeFromDefault", "[", "defVal_", "]"}], ":=", 
+         "\"\<String\>\""}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"askUnev", ":=", 
+          RowBox[{"Unevaluated", "[", "]"}]}], "*)"}], "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"AskFunction", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<template\>\"", "\[Rule]", "  ", 
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<Interpreter\>\"", "\[Rule]", " ", 
+                RowBox[{"retrieveTemplateNotebooks", "[", "]"}]}], ",", 
+               RowBox[{"\"\<Input\>\"", "\[Rule]", " ", "Null"}], ",", 
+               RowBox[{"\"\<Required\>\"", "\[Rule]", "True"}], ",", 
+               RowBox[{"\"\<Control\>\"", "\[Rule]", "PopupMenu"}], ",", 
+               RowBox[{"\"\<AutoSubmitting\>\"", "\[Rule]", "True"}]}], 
+              "|>"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"With", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"argsKvm", "=", 
+                RowBox[{"KeyValueMap", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    "\"\<\\\"\>\"", "<>", "#1", "<>", "\"\<\\\"\>\""}], 
+                    "\[Rule]", " ", 
+                    RowBox[{"<|", 
+                    RowBox[{
+                    RowBox[{"\"\<Interpreter\>\"", "\[Rule]", " ", 
+                    RowBox[{"formTypeFromDefault", "[", "#2", "]"}]}], ",", 
+                    " ", 
+                    RowBox[{"\"\<Default\>\"", "\[Rule]", "  ", "#2"}], ",", 
+                    RowBox[{"\"\<Input\>\"", "\[Rule]", "  ", "#2"}]}], 
+                    "|>"}]}], "&"}], ",", " ", 
+                  RowBox[{"extractNotebookTemplateParameters", "[", 
+                   RowBox[{"Ask", "[", "\"\<template\>\"", "]"}], "]"}]}], 
+                 "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Ask", "[", "\"\<templateArgs\>\"", "]"}], "=", 
+               RowBox[{"KeyMap", "[", 
+                RowBox[{"ToExpression", ",", 
+                 RowBox[{"Ask", "[", "argsKvm", "]"}]}], "]"}]}]}], "]"}], 
+            ";", "\[IndentingNewLine]", 
+            RowBox[{"createNotebook", "[", 
+             RowBox[{
+              RowBox[{"Ask", "[", "\"\<template\>\"", "]"}], ",", 
+              RowBox[{"Ask", "[", "\"\<templateArgs\>\"", "]"}]}], "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}], "[", "]"}]}], "]"}], ",", 
+      "\"\<Input\>\""}], "]"}], "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7437434509046507`*^9, 3.7437434678664913`*^9}, {
+   3.7437435311187086`*^9, 3.7437435654753485`*^9}, {3.7437436147255583`*^9, 
+   3.743743650457244*^9}, {3.743743736248666*^9, 3.743743738010595*^9}, {
+   3.743743836700844*^9, 3.7437438486897187`*^9}, {3.7437439024821525`*^9, 
+   3.743743956192647*^9}, {3.743743999563184*^9, 3.74374400919779*^9}, {
+   3.743744043463935*^9, 3.743744096607457*^9}, {3.743744200589319*^9, 
+   3.7437442010673656`*^9}, {3.7437442332909746`*^9, 3.743744236735939*^9}, {
+   3.7437442746144295`*^9, 3.7437443314771786`*^9}, {3.743744400803383*^9, 
+   3.743744447835909*^9}, 3.7437445005383596`*^9, {3.743744531379807*^9, 
+   3.7437445368397493`*^9}, {3.7437447383771286`*^9, 
+   3.7437447923399863`*^9}, {3.7437448469321165`*^9, 3.7437448864837*^9}, {
+   3.7437450418682303`*^9, 3.7437450515113688`*^9}, {3.7437451626622534`*^9, 
+   3.7437451947130084`*^9}, {3.7437453756850815`*^9, 3.743745398105876*^9}, {
+   3.7437459664215527`*^9, 3.74374600339312*^9}, {3.7437464053997955`*^9, 
+   3.7437464104527426`*^9}, {3.7437464746461983`*^9, 
+   3.7437464841282315`*^9}},ExpressionUUID->"bcf54643-35b9-4b54-b2eb-\
+1a91e81ae6e2"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["6xrek_shm", 3, 1]],85,
+   "FrontEndObject[LinkObject[\"6xrek_shm\", 3, 1]]","85","\"Untitled-28\""},
+  "NotebookObjectUnsaved"]], "Output",
+ CellChangeTimes->{
+  3.743743480263343*^9, 3.743743567147279*^9, {3.7437436322593613`*^9, 
+   3.743743651314849*^9}, 3.7437437386106024`*^9, 3.7437438497387085`*^9, 
+   3.7437439584515657`*^9, 3.7437440110737953`*^9, 3.7437440878714976`*^9, {
+   3.743744173739601*^9, 3.7437442024083*^9}, 3.7437442886750174`*^9, {
+   3.743744318893759*^9, 3.7437443321711197`*^9}, 3.743744468159643*^9, 
+   3.743744501350293*^9, 3.743744890051611*^9, 3.7437450618972955`*^9, {
+   3.7437451720791035`*^9, 3.74374519922097*^9}, 3.7437454083297696`*^9, {
+   3.743746025369893*^9, 3.74374604268979*^9}, 3.743746411611678*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"043f5256-91dd-4ed2-913b-de0a0362f8b9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NotebookEvaluate", "[", "pal1", "]"}]], "Input",
+ CellChangeTimes->{{3.743744895582552*^9, 3.7437449434204006`*^9}, {
+   3.7437460124340787`*^9, 3.7437460225119743`*^9}, {3.743746102897023*^9, 
+   3.743746103658967*^9}, 3.743746267526232*^9},
+ CellLabel->"In[39]:=",ExpressionUUID->"d52eee35-56a5-4fa9-b5ed-3174e19ce721"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["6xrek_shm", 3, 1]],84,
+   "FrontEndObject[LinkObject[\"6xrek_shm\", 3, 1]]","84","\"Untitled-27\""},
+  "NotebookObjectUnsaved"]], "Output",
+ CellChangeTimes->{3.743746203161546*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"d60623f5-4b53-46fb-acaf-e3311e69cab6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$$PaletteWorkingDirectory"], "Input",
+ CellLabel->"In[12]:=",ExpressionUUID->"6d9c6c2b-c5ba-4350-8697-e7b368743cc7"],
+
+Cell[BoxData["\<\"E:\\\\Mathematica\\\\Pallettes\\\\\"\>"], "Output",
+ CellChangeTimes->{{3.74374704240163*^9, 3.7437470633695436`*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"29b7cf60-6a70-4a71-9a27-067cc3c09fd4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{"$$PaletteWorkingDirectory", ",", "\"\<ManagedTemplates\>\""}], 
+   "}"}], "]"}]], "Input",
+ CellLabel->"In[13]:=",ExpressionUUID->"9f6399fe-d550-4cc4-8b32-da43063cf378"],
+
+Cell[BoxData["\<\"E:\\\\Mathematica\\\\Pallettes\\\\ManagedTemplates\"\>"], \
+"Output",
+ CellChangeTimes->{3.7437470291897836`*^9, 3.7437470674435005`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"320ebf31-5e03-411e-bcc0-2823bd68c1ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pal1", "//", "NotebookGet"}]], "Input",
+ CellChangeTimes->{{3.7437460683925943`*^9, 3.743746077790497*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"9c285c0c-f088-46e3-91bb-0d8110ad7879"],
+
+Cell[BoxData[
+ RowBox[{"Notebook", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", 
+       RowBox[{"RowBox", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            
+            RowBox[{"\<\"ClearAll\"\>", ",", "\<\"[\"\>", 
+             ",", "\<\"$DefaultManagedTemplateDirectory\"\>", 
+             ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            
+            RowBox[{"\<\"$DefaultManagedTemplateDirectory\"\>", 
+             ",", "\<\"=\"\>", ",", 
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{"\<\"FileNameJoin\"\>", ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"{\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"NotebookDirectory\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", 
+                    ",", "\<\"\\\"ManagedTemplates\\\"\"\>"}], "}"}], "]"}], 
+                   ",", "\<\"}\"\>"}], "}"}], "]"}], ",", "\<\"]\"\>"}], 
+               "}"}], "]"}]}], "}"}], "]"}], ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{"\<\"ClearAll\"\>", ",", "\<\"[\"\>", ",", 
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               
+               RowBox[{"\<\"retrieveTemplateNotebooks\"\>", ",", "\<\",\"\>", 
+                ",", "\<\"extractNotebookTemplateParameters\"\>", 
+                ",", "\<\",\"\>", ",", "\<\"createNotebook\"\>", 
+                ",", "\<\",\"\>", ",", "\<\"formTypeFromDefault\"\>"}], "}"}],
+               "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               
+               RowBox[{"\<\"retrieveTemplateNotebooks\"\>", ",", "\<\"[\"\>", 
+                ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  
+                  RowBox[{"\<\"dirs__\"\>", ",", "\<\":\"\>", 
+                   ",", "\<\"$DefaultManagedTemplateDirectory\"\>"}], "}"}], 
+                 "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\":=\"\>", 
+             ",", 
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  
+                  RowBox[{"\<\"KeyMap\"\>", ",", "\<\"[\"\>", 
+                   ",", "\<\"FileBaseName\"\>", ",", "\<\"]\"\>"}], "}"}], 
+                 "]"}], ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"AssociationMap\"\>", ",", "\<\"[\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"NotebookTemplate\"\>", ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"FileNames\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"*.nb\\\"\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"dirs\"\>"}], "}"}], "]"}], ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], 
+                 "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+          ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               
+               RowBox[{"\<\"extractNotebookTemplateParameters\"\>", 
+                ",", "\<\"[\"\>", ",", "\<\"Null\"\>", ",", "\<\"]\"\>"}], 
+               "}"}], "]"}], ",", "\<\"=\"\>", ",", "\<\"Null\"\>"}], "}"}], 
+           "]"}], ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               
+               RowBox[{"\<\"extractNotebookTemplateParameters\"\>", 
+                ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"nb_TemplateObject\"\>", ",", "\<\":\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"(\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"First\"\>", ",", "\<\"@*\"\>", 
+                    ",", "\<\"Values\"\>"}], "}"}], "]"}], ",", "\<\")\"\>"}],
+                     "}"}], "]"}], ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"retrieveTemplateNotebooks\"\>", 
+                    ",", "\<\"[\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\":=\"\>", ",", 
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{"\<\"Association\"\>", ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"Apply\"\>", ",", "\<\"[\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"ToExpression\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"#1\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"\[Rule]\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"ToExpression\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"#2\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}]}], 
+                    "}"}], "]"}], ",", "\<\"&\"\>"}], "}"}], "]"}], 
+                    ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Sort\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Cases\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"(\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"NotebookGet\"\>", ",", "\<\"@@\"\>", 
+                    ",", "\<\"nb\"\>"}], "}"}], "]"}], ",", "\<\")\"\>"}], 
+                    "}"}], "]"}], ",", "\<\"\[LeftDoubleBracket]\"\>", 
+                    ",", "\<\"1\"\>", ",", "\<\"\[RightDoubleBracket]\"\>"}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"TemplateBox\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"param_List\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"\\\"NotebookTemplateSlot\\\"\"\>"}], "}"}], 
+                    "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"\[RuleDelayed]\"\>", ",", "\<\"param\"\>"}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"{\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"1\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"\[Infinity]\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"}\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"{\"\>", ",", "\<\"1\"\>", ",", "\<\"}\"\>"}],
+                     "}"}], "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], 
+                 "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+          ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{"\<\"createNotebook\"\>", ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  
+                  RowBox[{"\<\"templateNb_TemplateObject\"\>", 
+                   ",", "\<\",\"\>", ",", "\<\"args_Association\"\>"}], "}"}],
+                  "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\":=\"\>", 
+             ",", 
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"(\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"(\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"SetOptions\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"#1\"\>", ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Visible\"\>", ",", "\<\"\[Rule]\"\>", 
+                    ",", "\<\"True\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\";\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"NotebookSave\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"#1\"\>", ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"RelativeFilePath\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Lookup\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"args\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"\\\"name\\\"\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"\\\"new\\\"\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\"<>\"\>", 
+                    ",", "\<\"\\\".nb\\\"\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Interactive\"\>", ",", "\<\"\[Rule]\"\>", 
+                    ",", "\<\"True\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\")\"\>"}], "}"}], "]"}], ",", "\<\"&\"\>"}], 
+                    "}"}], "]"}], ",", "\<\")\"\>"}], "}"}], "]"}], 
+                ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\<\"TemplateApply\"\>", ",", "\<\"[\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"templateNb\"\>", ",", "\<\",\"\>", 
+                    ",", "\<\"args\"\>"}], "}"}], "]"}], ",", "\<\"]\"\>"}], 
+                  "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], 
+           "]"}], ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{"\<\"formTypeFromDefault\"\>", ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  
+                  RowBox[{"\<\"defVal_\"\>", ",", "\<\"?\"\>", 
+                   ",", "\<\"NumberQ\"\>"}], "}"}], "]"}], ",", "\<\"]\"\>"}],
+                "}"}], "]"}], ",", "\<\":=\"\>", 
+             ",", "\<\"\\\"Number\\\"\"\>"}], "}"}], "]"}], ",", "\<\";\"\>", 
+          ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               
+               RowBox[{"\<\"formTypeFromDefault\"\>", ",", "\<\"[\"\>", 
+                ",", "\<\"defVal_\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}], 
+             ",", "\<\":=\"\>", ",", "\<\"\\\"String\\\"\"\>"}], "}"}], "]"}],
+           ",", "\<\";\"\>", ",", 
+          RowBox[{"RowBox", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RowBox", "[", 
+              RowBox[{"{", 
+               RowBox[{"\<\"AskFunction\"\>", ",", "\<\"[\"\>", ",", 
+                RowBox[{"RowBox", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"{\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"template\\\"\"\>", 
+                    ",", "\<\"\[Rule]\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Association\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Interpreter\\\"\"\>", 
+                    ",", "\<\"\[Rule]\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"retrieveTemplateNotebooks\"\>", 
+                    ",", "\<\"[\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}]}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Input\\\"\"\>", ",", "\<\"\[Rule]\"\>", 
+                    ",", "\<\"Null\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", 
+                    ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Required\\\"\"\>", 
+                    ",", "\<\"\[Rule]\"\>", ",", "\<\"True\"\>"}], "}"}], 
+                    "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Control\\\"\"\>", ",", "\<\"\[Rule]\"\>",
+                     ",", "\<\"PopupMenu\"\>"}], "}"}], "]"}], 
+                    ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"AutoSubmitting\\\"\"\>", 
+                    ",", "\<\"\[Rule]\"\>", ",", "\<\"True\"\>"}], "}"}], 
+                    "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}],
+                     "}"}], "]"}], ",", "\<\"}\"\>"}], "}"}], "]"}], 
+                   ",", "\<\",\"\>", ",", 
+                   RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"With\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"{\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"argsKvm\"\>", ",", "\<\"=\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"KeyValueMap\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"\\\\\\\"\\\"\"\>", ",", "\<\"<>\"\>", 
+                    ",", "\<\"#1\"\>", ",", "\<\"<>\"\>", 
+                    ",", "\<\"\\\"\\\\\\\"\\\"\"\>"}], "}"}], "]"}], 
+                    ",", "\<\"\[Rule]\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Association\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Interpreter\\\"\"\>", 
+                    ",", "\<\"\[Rule]\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"formTypeFromDefault\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"#2\"\>", ",", "\<\"]\"\>"}], "}"}], "]"}]}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Default\\\"\"\>", ",", "\<\"\[Rule]\"\>",
+                     ",", "\<\"#2\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"\\\"Input\\\"\"\>", ",", "\<\"\[Rule]\"\>", 
+                    ",", "\<\"#2\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"&\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"extractNotebookTemplateParameters\"\>", 
+                    ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Ask\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"\\\"template\\\"\"\>", ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], 
+                    "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}], "}"}], "]"}], 
+                    ",", "\<\"}\"\>"}], "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Ask\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"\\\"templateArgs\\\"\"\>", ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}], ",", "\<\"=\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"KeyMap\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"ToExpression\"\>", ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Ask\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"argsKvm\"\>", ",", "\<\"]\"\>"}], "}"}], 
+                    "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], "]"}]}],
+                     "}"}], "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], 
+                    "]"}], ",", "\<\";\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"createNotebook\"\>", ",", "\<\"[\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Ask\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"\\\"template\\\"\"\>", ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}], ",", "\<\",\"\>", ",", 
+                    RowBox[{"RowBox", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Ask\"\>", ",", "\<\"[\"\>", 
+                    ",", "\<\"\\\"templateArgs\\\"\"\>", ",", "\<\"]\"\>"}], 
+                    "}"}], "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}], "}"}], 
+                    "]"}]}], "}"}], "]"}]}], "}"}], "]"}], ",", "\<\"]\"\>"}],
+                "}"}], "]"}], ",", "\<\"[\"\>", ",", "\<\"]\"\>"}], "}"}], 
+           "]"}]}], "}"}], "]"}], "]"}], ",", "\<\"Input\"\>", ",", 
+      RowBox[{"CellMargins", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"CellBracketOptions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Color\"\>", "\[Rule]", 
+         InterpretationBox[
+          ButtonBox[
+           TooltipBox[
+            GraphicsBox[{
+              {GrayLevel[0], RectangleBox[{0, 0}]}, 
+              {GrayLevel[0], RectangleBox[{1, -1}]}, 
+              {RGBColor[0.269993, 0.308507, 0.6], 
+               RectangleBox[{0, -1}, {2, 1}]}},
+             AspectRatio->1,
+             DefaultBaseStyle->"ColorSwatchGraphics",
+             Frame->True,
+             
+             FrameStyle->RGBColor[
+              0.17999533333333334`, 0.20567133333333332`, 0.4],
+             FrameTicks->None,
+             
+             ImageSize->
+              Dynamic[{
+               Automatic, 1.35 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}],
+             PlotRangePadding->None],
+            StyleBox[
+             RowBox[{"RGBColor", "[", 
+               RowBox[{"0.269993`", ",", "0.308507`", ",", "0.6`"}], "]"}], 
+             NumberMarks -> False]],
+           Appearance->None,
+           BaseStyle->{},
+           BaselinePosition->Baseline,
+           ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+             If[
+              Not[
+               AbsoluteCurrentValue["Deployed"]], 
+              SelectionMove[Typeset`box$, All, Expression]; 
+              FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+              FrontEnd`Private`$ColorSelectorInitialColor = 
+               RGBColor[0.269993, 0.308507, 0.6]; 
+              FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+              MathLink`CallFrontEnd[
+                FrontEnd`AttachCell[Typeset`box$, 
+                 FrontEndResource["RGBColorValueSelector"], {
+                 0, {Left, Bottom}}, {Left, Top}, 
+                 "ClosingActions" -> {
+                  "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+           DefaultBaseStyle->{},
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          RGBColor[0.269993, 0.308507, 0.6],
+          Editable->False,
+          Selectable->False]}], "}"}]}], ",", 
+      RowBox[{"CellHorizontalScrolling", "\[Rule]", "True"}], ",", 
+      RowBox[{"PageBreakAbove", "\[Rule]", "True"}], ",", 
+      RowBox[{"PageBreakWithin", "\[Rule]", "False"}], ",", 
+      RowBox[{"ShowAutoStyles", "\[Rule]", "True"}], ",", 
+      RowBox[{"LineSpacing", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"1.25`", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"AutoItalicWords", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"ScriptMinSize", "\[Rule]", "9"}], ",", 
+      RowBox[{"ShowStringCharacters", "\[Rule]", "False"}], ",", 
+      RowBox[{"FontFamily", "\[RuleDelayed]", 
+       RowBox[{"CurrentValue", "[", "\<\"PanelFontFamily\"\>", "]"}]}], ",", 
+      RowBox[{"FontSize", "\[RuleDelayed]", 
+       RowBox[{"CurrentValue", "[", "\<\"PanelFontSize\"\>", "]"}]}]}], "]"}],
+     "}"}], ",", 
+   RowBox[{"WindowSize", "\[Rule]", "All"}], ",", 
+   RowBox[{"WindowMargins", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", "0"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"WindowElements", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{
+   "FrontEndVersion", 
+    "\[Rule]", "\<\"11.3 for Microsoft Windows (64-bit) (March 6, \
+2018)\"\>"}], ",", 
+   RowBox[{"StyleDefinitions", "\[Rule]", "\<\"Palette.nb\"\>"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{{3.7437460697985797`*^9, 3.743746078490489*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"dcd5b494-6c14-4878-a2e7-ef0748977372"]
+}, Open  ]]
+},
+InitializationCellEvaluation->True,
+WindowSize->{1847, 1157},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 34, 0, 22, NotebookDefault,ExpressionUUID->"7a961c0c-8349-4d4a-aad3-0cdef4c84345"],
+Cell[595, 22, 6100, 155, 368, "Input",ExpressionUUID->"6af79d0c-b3c1-42eb-ac7c-1a87a1675b45",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[6720, 181, 7636, 161, 371, "Input",ExpressionUUID->"bcf54643-35b9-4b54-b2eb-1a91e81ae6e2"],
+Cell[14359, 344, 885, 14, 51, "Output",ExpressionUUID->"043f5256-91dd-4ed2-913b-de0a0362f8b9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15281, 363, 345, 5, 28, "Input",ExpressionUUID->"d52eee35-56a5-4fa9-b5ed-3174e19ce721"],
+Cell[15629, 370, 320, 6, 51, "Output",ExpressionUUID->"d60623f5-4b53-46fb-acaf-e3311e69cab6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15986, 381, 130, 1, 28, "Input",ExpressionUUID->"6d9c6c2b-c5ba-4350-8697-e7b368743cc7"],
+Cell[16119, 384, 215, 2, 32, "Output",ExpressionUUID->"29b7cf60-6a70-4a71-9a27-067cc3c09fd4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16371, 391, 242, 5, 28, "Input",ExpressionUUID->"9f6399fe-d550-4cc4-8b32-da43063cf378"],
+Cell[16616, 398, 234, 3, 32, "Output",ExpressionUUID->"320ebf31-5e03-411e-bcc0-2823bd68c1ee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16887, 406, 210, 3, 28, "Input",ExpressionUUID->"9c285c0c-f088-46e3-91bb-0d8110ad7879"],
+Cell[17100, 411, 26994, 591, 641, "Output",ExpressionUUID->"dcd5b494-6c14-4878-a2e7-ef0748977372"]
+}, Open  ]]
+}
+]
+*)
+
