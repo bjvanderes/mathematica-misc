@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     45315,       1193]
-NotebookOptionsPosition[     41784,       1133]
-NotebookOutlinePosition[     42166,       1150]
-CellTagsIndexPosition[     42123,       1147]
+NotebookDataLength[     72171,       1865]
+NotebookOptionsPosition[     66699,       1774]
+NotebookOutlinePosition[     67072,       1790]
+CellTagsIndexPosition[     67029,       1787]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -41,6 +41,11 @@ Cell["PrintDefinitions", "Subsection",
 b48444e67859"],
 
 Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<GeneralUtilities`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7445861966703897`*^9, 3.74458623187897*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"7e26d321-9709-48e1-95b4-b145dfd0f0dd"],
+
+Cell[BoxData[
  RowBox[{"PrintDefinitions", "[", "Paclet", "]"}]], "Input",
  CellChangeTimes->{{3.744176901484185*^9, 3.7441769284261093`*^9}, {
   3.74417701058245*^9, 
@@ -66,7 +71,51 @@ Cell[BoxData[
  CellChangeTimes->{{3.744176901484185*^9, 3.7441769284261093`*^9}, {
   3.74417701058245*^9, 
   3.7441770244189987`*^9}},ExpressionUUID->"450a0bcb-6914-43b4-8cb6-\
-aacae56fb83e"]
+aacae56fb83e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"PrintDefinitions", "[", "FrontEnd`SetValue", "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7445860233925266`*^9, {3.744586135164154*^9, 3.744586144864025*^9}, 
+   3.744586378984559*^9, 3.744586496861101*^9, 3.744586969253132*^9, 
+   3.74458869056001*^9, {3.744588854981143*^9, 3.7445888985077133`*^9}, {
+   3.744589029889347*^9, 3.7445890509748898`*^9}, 3.7445892455800066`*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"66851e9f-9ac5-457b-a9fa-ace8a1d0dc4b"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["z9czj_shm", 3, 1]],122,
+   "FrontEndObject[LinkObject[\"z9czj_shm\", 3, 1]]","122",
+   "\"FrontEnd`SetValue\""},
+  "NotebookObjectUnsaved"]], "Output",
+ CellChangeTimes->{3.744586237746897*^9, 3.7445864979600887`*^9, 
+  3.7445865552026834`*^9, 3.7445867500308533`*^9, 3.7445869702900667`*^9, 
+  3.744588691632065*^9, 3.7445888560450687`*^9, 3.744588900028643*^9, 
+  3.7445890536239157`*^9, 3.7445892466499424`*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"2cd8c263-2aaf-4cf5-b2a5-a30b5af43064"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CurrentValue", "[", 
+  RowBox[{"$FrontEnd", ",", "\"\<FrontEndResources\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.744586529156704*^9, 3.7445865390637064`*^9}, {
+  3.744586570443224*^9, 3.7445865818862405`*^9}, {3.7445866893102493`*^9, 
+  3.744586720655864*^9}, {3.7445867806963115`*^9, 3.744586781912298*^9}, {
+  3.7445885985673604`*^9, 3.7445886087342377`*^9}, {3.744589368304863*^9, 
+  3.7445894322551785`*^9}, {3.744589573462516*^9, 3.7445895764604797`*^9}, {
+  3.744589618135298*^9, 3.7445896705241346`*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"0fb1a907-415c-4016-b2e8-fe6a0fa96d7d"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.7445893765340505`*^9, 3.744589577356468*^9, 
+  3.7445896396474667`*^9, 3.744589671244125*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"c50966ff-7959-46cc-8a44-bc6a2e4319ed"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1124,18 +1173,609 @@ Cell[BoxData[
  FontWeight->"Plain",ExpressionUUID->"89eb3539-b9d1-4d8f-b5db-8660dd1148b7"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell["Work", "Subsection",
  CellChangeTimes->{{3.743405316932127*^9, 
   3.74340531961756*^9}},ExpressionUUID->"698fcd27-e4f6-4ed5-9213-\
-f8a408d39c41"]
+f8a408d39c41"],
+
+Cell[BoxData[
+ RowBox[{"FrontEndExecute", "@", 
+  RowBox[{"FrontEnd`FlushTextResourceCaches", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7445848637519693`*^9, 3.7445848637559695`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"6bd95942-22ad-443c-bd6b-a2100818cae8"],
+
+Cell[BoxData["Resource"], "Input",
+ CellChangeTimes->{{3.744585162208186*^9, 
+  3.744585164132163*^9}},ExpressionUUID->"a7b18f55-9885-4054-a0bb-\
+32cbde2922a8"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7445852811452556`*^9, 
+  3.7445852828062353`*^9}},ExpressionUUID->"92cbcdac-df94-4f0a-b74d-\
+bcd1c61f6e67"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "FEPrivate`*"}]], "Input",
+ CellChangeTimes->{{3.7445852436343765`*^9, 3.744585295385086*^9}, {
+   3.744585447727522*^9, 3.744585453532604*^9}, {3.7445868051340113`*^9, 
+   3.744586834387388*^9}, {3.744586867733327*^9, 3.744586868979313*^9}, {
+   3.7445870290303135`*^9, 3.744587054576402*^9}, {3.7445870877792606`*^9, 
+   3.74458708980018*^9}, 3.7445883790158653`*^9, {3.744588655975365*^9, 
+   3.744588657633294*^9}, {3.7445891025778627`*^9, 3.74458910437084*^9}, {
+   3.7445891500179152`*^9, 3.744589152158889*^9}, {3.744590101813355*^9, 
+   3.7445901046273203`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"c58f05bd-007a-4fc4-b92a-9c33305acd7f"],
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["FEPrivate`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["FEPrivate`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["And",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"And", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["GraphicsSystemInformation",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "GraphicsSystemInformation", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Or",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Or", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Self",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Self", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["WrapImageWithEditCell",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "WrapImageWithEditCell", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["Apply",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Apply", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Greater",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Greater", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ParentDynamicModule",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{
+           "Info413744575706-3913756", {"ParentDynamicModule", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Set",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Set", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$ActivationKey",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$ActivationKey", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["BrowserPluginVersions",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "BrowserPluginVersions", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Head",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Head", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Part",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Part", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["SetDebuggerState",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"SetDebuggerState", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$CreationID",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$CreationID", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["CopiedIndicesValueFunction",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "CopiedIndicesValueFunction", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["If",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"If", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["PixelDisplayFunction",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"PixelDisplayFunction", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["SetDelayed",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"SetDelayed", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$LayoutCreationID",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$LayoutCreationID", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["CopiedPixelValueFunction",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "CopiedPixelValueFunction", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ImageIndicesDisplayFunction",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "ImageIndicesDisplayFunction", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["PlayerProQ",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"PlayerProQ", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["StringRectangle",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"StringRectangle", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$OperatingSystem",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$OperatingSystem", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["EmitSound",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"EmitSound", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ImageIndicesValueFunction",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "ImageIndicesValueFunction", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["PlayerQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"PlayerQ", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["StringWidth",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"StringWidth", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$ProductIDName",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$ProductIDName", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["FindAndClickCancelButton",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "FindAndClickCancelButton", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ImportImage",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ImportImage", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ResolveGridLines",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ResolveGridLines", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Switch",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Switch", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$ProductVersion",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$ProductVersion", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["FindAndClickDefaultButton",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "FindAndClickDefaultButton", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["IndexedCell",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"IndexedCell", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ResolveTicks",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ResolveTicks", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["TaskTimes",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"TaskTimes", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$StartTimes",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$StartTimes", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["FrontEndResource",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"FrontEndResource", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Join",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Join", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ResolveTypesetForm",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ResolveTypesetForm", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["TranslateKeyword",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"TranslateKeyword", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["$SystemID",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"$SystemID", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"]},
+        {
+         ButtonBox["FrontEndResourceString",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "FrontEndResourceString", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Less",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Less", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ReverseSet",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ReverseSet", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["TruncateStringToWidth",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "TruncateStringToWidth", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], ""},
+        {
+         ButtonBox["GetEnclosingImageMarkerGraphics",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "GetEnclosingImageMarkerGraphics", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["MemberQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"MemberQ", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["SameQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"SameQ", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["UnsameQ",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"UnsameQ", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], ""},
+        {
+         ButtonBox["GetEnclosingImageMarkersIndices",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {
+            "GetEnclosingImageMarkersIndices", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Not",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Not", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["SecureEvaluate",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"SecureEvaluate", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["Which",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{"Info413744575706-3913756", {"Which", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], ""},
+        {
+         ButtonBox["GetPopupList",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"GetPopupList", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["ObjectContents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"ObjectContents", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["SelectionBoxParents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"SelectionBoxParents", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], 
+         ButtonBox["WithContext",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info413744575706-3913756", {"WithContext", "FEPrivate`"}},
+          ButtonNote->"FEPrivate`"], ""}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.19]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell",
+ CellChangeTimes->{
+  3.7445901061382494`*^9},ExpressionUUID->"e0e46282-888e-4038-b3ff-\
+e00fc532433b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceSearch", "[", "\"\<KeyEvent\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.744586437622885*^9, 3.7445864584925833`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"cce27441-02aa-465b-b9ff-bcf02c82f6af"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CloudConnect","offline",
+   "\"The Wolfram Language is currently configured not to use the Internet. \
+To allow Internet use, check the \\\"Allow the Wolfram Language to use the \
+Internet\\\" box in the Help \[FilledRightTriangle] Internet Connectivity \
+dialog.\"",2,9,5,17525535504094382256,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7445864632225165`*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"06c196e7-85c5-471f-8d57-839f99e2c918"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ResourceSearch","cloudc",
+   "\"You must connect to the Wolfram cloud to search for resources.\"",2,9,6,
+   17525535504094382256,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.744586463268515*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"43b901f4-b306-4642-b43b-d9e87fae847c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["System`NeedCurrentFrontEndSymbolsPacket"], "Input",
+ CellChangeTimes->{{3.7445888370297456`*^9, 3.7445888427832317`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"ca91346d-36aa-44b1-bb14-10c772d8bf20"],
+
+Cell[BoxData["NeedCurrentFrontEndSymbolsPacket"], "Output",
+ CellChangeTimes->{
+  3.744586463293516*^9, {3.7445888394897532`*^9, 3.744588843432223*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"90d4d87d-3740-45ce-b36d-92910cf41442"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TextResourceLoad", "[", 
+   RowBox[{
+   "ResourceLocator`Private`appName_String", ",", 
+    "ResourceLocator`Private`appRoot_String"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "ResourceLocator`Private`resName", ",", 
+      "ResourceLocator`Private`resBase", ",", 
+      "ResourceLocator`Private`resFile", ",", 
+      "ResourceLocator`Private`dataLang", ",", "ResourceLocator`Private`data",
+       ",", "ResourceLocator`Private`def"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"ResourceLocator`Private`resName", "=", "\"\<Default.m\>\""}], 
+     ";", 
+     RowBox[{"ResourceLocator`Private`resBase", "=", 
+      RowBox[{"ToFileName", "[", 
+       RowBox[{
+        RowBox[{"{", "ResourceLocator`Private`appRoot", "}"}], ",", 
+        "\"\<TextResources\>\""}], "]"}]}], ";", 
+     RowBox[{"ResourceLocator`Private`resFile", "=", 
+      RowBox[{"ToFileName", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"ResourceLocator`Private`resBase", ",", "$Language"}], "}"}],
+         ",", "ResourceLocator`Private`resName"}], "]"}]}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"$Language", "===", "\"\<English\>\""}], "||", 
+        RowBox[{
+         RowBox[{"FileType", "[", "ResourceLocator`Private`resFile", "]"}], "=!=",
+          "File"}]}], ",", 
+       RowBox[{"ResourceLocator`Private`dataLang", "=", 
+        RowBox[{"{", "}"}]}], ",", 
+       RowBox[{"ResourceLocator`Private`dataLang", "=", 
+        RowBox[{"Get", "[", "ResourceLocator`Private`resFile", "]"}]}]}], 
+      "]"}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"ListQ", "[", "ResourceLocator`Private`dataLang", "]"}]}], 
+       ",", 
+       RowBox[{
+        RowBox[{"Message", "[", 
+         RowBox[{
+          StyleBox[
+           RowBox[{"TextResourceLoad", "::", "badresl"}], "MessageName"], ",",
+           "ResourceLocator`Private`dataLang", ",", 
+          "ResourceLocator`Private`appName", ",", 
+          "ResourceLocator`Private`resName", ",", "$Language"}], "]"}], ";", 
+        RowBox[{"Return", "[", "$Failed", "]"}]}]}], "]"}], ";", 
+     RowBox[{"ResourceLocator`Private`resFile", "=", 
+      RowBox[{"ToFileName", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"ResourceLocator`Private`resBase", ",", "\"\<English\>\""}], 
+         "}"}], ",", "ResourceLocator`Private`resName"}], "]"}]}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"FileType", "[", "ResourceLocator`Private`resFile", "]"}], "=!=",
+         "File"}], ",", 
+       RowBox[{
+        RowBox[{"Message", "[", 
+         RowBox[{
+          StyleBox[
+           RowBox[{"TextResourceLoad", "::", "nores"}], "MessageName"], ",", 
+          "ResourceLocator`Private`appName", ",", 
+          "ResourceLocator`Private`resName"}], "]"}], ";", 
+        RowBox[{"Return", "[", "$Failed", "]"}]}]}], "]"}], ";", 
+     RowBox[{"ResourceLocator`Private`data", "=", 
+      RowBox[{"Get", "[", "ResourceLocator`Private`resFile", "]"}]}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"ListQ", "[", "ResourceLocator`Private`data", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Message", "[", 
+         RowBox[{
+          StyleBox[
+           RowBox[{"TextResourceLoad", "::", "badres"}], "MessageName"], ",", 
+          "ResourceLocator`Private`data", ",", 
+          "ResourceLocator`Private`appName", ",", 
+          "ResourceLocator`Private`resName"}], "]"}], ";", 
+        RowBox[{"Return", "[", "$Failed", "]"}]}]}], "]"}], ";", 
+     RowBox[{"ResourceLocator`Private`def", "=", 
+      RowBox[{
+       RowBox[{"Verbatim", "[", "_", "]"}], "/.", "\[VeryThinSpace]", 
+       "ResourceLocator`Private`dataLang"}]}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"StringQ", "[", "ResourceLocator`Private`def", "]"}]}], ",", 
+       RowBox[{"ResourceLocator`Private`def", "=", 
+        RowBox[{
+         RowBox[{"Verbatim", "[", "_", "]"}], "/.", "\[VeryThinSpace]", 
+         "ResourceLocator`Private`data"}]}]}], "]"}], ";", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"StringQ", "[", "ResourceLocator`Private`def", "]"}]}], ",", 
+       RowBox[{"ResourceLocator`Private`def", "=", "\"\<Not Found\>\""}]}], 
+      "]"}], ";", 
+     RowBox[{"ResourceLocator`Private`dataLang", "=", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{"ResourceLocator`Private`dataLang", ",", 
+        RowBox[{"_", "[", 
+         RowBox[{
+          RowBox[{"Verbatim", "[", "_", "]"}], ",", "_"}], "]"}]}], "]"}]}], 
+     ";", 
+     RowBox[{"ResourceLocator`Private`data", "=", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{"ResourceLocator`Private`data", ",", 
+        RowBox[{"_", "[", 
+         RowBox[{
+          RowBox[{"Verbatim", "[", "_", "]"}], ",", "_"}], "]"}]}], "]"}]}], 
+     ";", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", 
+       RowBox[{"\"\<<<\>\"", ",", "TextResourceFunction", ",", "\"\<>>\>\""}],
+        "}"}], "]"}]}]}], "]"}]}]], "Input",ExpressionUUID->"547f1b69-c301-\
+4af1-ba04-1a4e9075868e"],
+
+Cell[BoxData["After"], "Output",ExpressionUUID->"53379573-3dab-4234-9418-1592585a589d"],
+
+Cell[BoxData["After"], "Output",ExpressionUUID->"7d3120d6-b6dc-4434-bcd5-441afe50cded"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1436, 855},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1858, 1157},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 Magnification:>1.2 Inherited,
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"BStyle.nb"
 ]
 (* End of Notebook Content *)
@@ -1150,49 +1790,81 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 178, 3, 119, "Title",ExpressionUUID->"8abd25de-d4ac-4898-afe0-8ad52dae06b1"],
+Cell[580, 22, 178, 3, 118, "Title",ExpressionUUID->"8abd25de-d4ac-4898-afe0-8ad52dae06b1"],
 Cell[CellGroupData[{
-Cell[783, 29, 268, 4, 82, "Section",ExpressionUUID->"ba6a8f9c-09fc-4cbf-a307-b7c527334bb8"],
+Cell[783, 29, 268, 4, 80, "Section",ExpressionUUID->"ba6a8f9c-09fc-4cbf-a307-b7c527334bb8"],
 Cell[CellGroupData[{
 Cell[1076, 37, 163, 3, 67, "Subsection",ExpressionUUID->"e5b801a7-123c-4e2e-9078-b48444e67859"],
-Cell[1242, 42, 252, 5, 38, "Input",ExpressionUUID->"56ddcb71-7ff8-4d8b-9728-f69fba55b100"],
-Cell[1497, 49, 258, 5, 38, "Input",ExpressionUUID->"20565781-25d1-4414-98a6-31715048d946"],
-Cell[1758, 56, 297, 5, 64, "Input",ExpressionUUID->"0e78df0a-9f30-45c9-b8ed-5190ebff0bdd"],
-Cell[2058, 63, 237, 5, 38, "Input",ExpressionUUID->"450a0bcb-6914-43b4-8cb6-aacae56fb83e"]
+Cell[1242, 42, 227, 3, 37, "Input",ExpressionUUID->"7e26d321-9709-48e1-95b4-b145dfd0f0dd"],
+Cell[1472, 47, 252, 5, 37, "Input",ExpressionUUID->"56ddcb71-7ff8-4d8b-9728-f69fba55b100"],
+Cell[1727, 54, 258, 5, 37, "Input",ExpressionUUID->"20565781-25d1-4414-98a6-31715048d946"],
+Cell[1988, 61, 297, 5, 62, "Input",ExpressionUUID->"0e78df0a-9f30-45c9-b8ed-5190ebff0bdd"],
+Cell[2288, 68, 237, 5, 37, "Input",ExpressionUUID->"450a0bcb-6914-43b4-8cb6-aacae56fb83e"],
+Cell[CellGroupData[{
+Cell[2550, 77, 494, 8, 37, "Input",ExpressionUUID->"66851e9f-9ac5-457b-a9fa-ace8a1d0dc4b"],
+Cell[3047, 87, 553, 10, 62, "Output",ExpressionUUID->"2cd8c263-2aaf-4cf5-b2a5-a30b5af43064"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2332, 73, 155, 3, 67, "Subsection",ExpressionUUID->"65715537-bd05-44d2-8a07-b52168d7e45a"],
-Cell[2490, 78, 1335, 40, 141, "Input",ExpressionUUID->"177dc3f5-e8aa-41f3-9351-649a7e5389bd"],
-Cell[3828, 120, 749, 19, 89, "Input",ExpressionUUID->"769bf35d-b206-4447-88ce-2de44ed6da18"],
-Cell[4580, 141, 6060, 179, 694, "Input",ExpressionUUID->"c6cf789e-5822-4754-8733-8b92630c4272"],
-Cell[10643, 322, 547, 14, 64, "Input",ExpressionUUID->"e80346c4-d128-424f-b9f5-0c7ace76ce55"]
+Cell[3637, 102, 620, 9, 37, "Input",ExpressionUUID->"0fb1a907-415c-4016-b2e8-fe6a0fa96d7d"],
+Cell[4260, 113, 228, 3, 41, "Output",ExpressionUUID->"c50966ff-7959-46cc-8a44-bc6a2e4319ed"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4537, 122, 155, 3, 67, "Subsection",ExpressionUUID->"65715537-bd05-44d2-8a07-b52168d7e45a"],
+Cell[4695, 127, 1335, 40, 112, "Input",ExpressionUUID->"177dc3f5-e8aa-41f3-9351-649a7e5389bd"],
+Cell[6033, 169, 749, 19, 62, "Input",ExpressionUUID->"769bf35d-b206-4447-88ce-2de44ed6da18"],
+Cell[6785, 190, 6060, 179, 643, "Input",ExpressionUUID->"c6cf789e-5822-4754-8733-8b92630c4272"],
+Cell[12848, 371, 547, 14, 62, "Input",ExpressionUUID->"e80346c4-d128-424f-b9f5-0c7ace76ce55"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[11227, 341, 172, 3, 47, "Subsection",ExpressionUUID->"1ae2878b-561b-4078-843d-8f9e842b548b"],
-Cell[11402, 346, 630, 14, 95, "Input",ExpressionUUID->"2140ace8-0d2a-46ed-9418-9729ab3643f2"],
-Cell[12035, 362, 384, 7, 38, "Input",ExpressionUUID->"ccb0b71d-c0f2-45a0-baea-dd338399daff"],
-Cell[12422, 371, 2372, 42, 195, "Input",ExpressionUUID->"6d170d87-4ec6-444c-9799-e0f18188fda5"],
-Cell[14797, 415, 519, 16, 64, "Input",ExpressionUUID->"b8943d42-7935-44dd-aa1b-13da31f73697"],
-Cell[15319, 433, 759, 20, 95, "Input",ExpressionUUID->"779d026e-65cb-4da1-b809-91b43fa92eae"],
-Cell[16081, 455, 3081, 75, 264, "Input",ExpressionUUID->"dbccba2c-8d07-4cff-bbdc-653f9c596fd8"],
+Cell[13432, 390, 172, 3, 47, "Subsection",ExpressionUUID->"1ae2878b-561b-4078-843d-8f9e842b548b"],
+Cell[13607, 395, 630, 14, 94, "Input",ExpressionUUID->"2140ace8-0d2a-46ed-9418-9729ab3643f2"],
+Cell[14240, 411, 384, 7, 37, "Input",ExpressionUUID->"ccb0b71d-c0f2-45a0-baea-dd338399daff"],
+Cell[14627, 420, 2372, 42, 192, "Input",ExpressionUUID->"6d170d87-4ec6-444c-9799-e0f18188fda5"],
+Cell[17002, 464, 519, 16, 62, "Input",ExpressionUUID->"b8943d42-7935-44dd-aa1b-13da31f73697"],
+Cell[17524, 482, 759, 20, 94, "Input",ExpressionUUID->"779d026e-65cb-4da1-b809-91b43fa92eae"],
+Cell[18286, 504, 3081, 75, 254, "Input",ExpressionUUID->"dbccba2c-8d07-4cff-bbdc-653f9c596fd8"],
 Cell[CellGroupData[{
-Cell[19187, 534, 1946, 40, 64, "Input",ExpressionUUID->"e396cc78-b060-4f47-bcbc-ed11cb7d729d"],
-Cell[21136, 576, 652, 16, 42, "Output",ExpressionUUID->"a7361830-bb78-41a6-aae1-9ef5d7d9a4e1"]
+Cell[21392, 583, 1946, 40, 37, "Input",ExpressionUUID->"e396cc78-b060-4f47-bcbc-ed11cb7d729d"],
+Cell[23341, 625, 652, 16, 41, "Output",ExpressionUUID->"a7361830-bb78-41a6-aae1-9ef5d7d9a4e1"]
 }, Open  ]],
-Cell[21803, 595, 2582, 44, 38, "Input",ExpressionUUID->"1d2f2043-8841-4abc-a63b-93075148fad0"]
+Cell[24008, 644, 2582, 44, 37, "Input",ExpressionUUID->"1d2f2043-8841-4abc-a63b-93075148fad0"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[24422, 644, 187, 3, 47, "Subsection",ExpressionUUID->"23e1325e-fd12-487c-8359-985b389f9aba"],
-Cell[24612, 649, 185, 4, 38, "Input",ExpressionUUID->"b19540fc-82e5-4e9c-b114-d9202812d92d"],
-Cell[24800, 655, 653, 13, 114, "Input",ExpressionUUID->"bcbb9c07-1bc7-47e0-b215-42a8076be7ae"],
-Cell[25456, 670, 3890, 100, 125, "Input",ExpressionUUID->"d1182081-610f-4f60-8ba1-8f30d8be51e7"],
-Cell[29349, 772, 2084, 57, 98, "Input",ExpressionUUID->"fbb8af79-6d83-4005-ab86-9761e51d3602"],
-Cell[31436, 831, 4930, 141, 238, "Input",ExpressionUUID->"eb4da150-fce9-4dbb-904f-a8f1d6af739f"],
-Cell[36369, 974, 2060, 58, 73, "Input",ExpressionUUID->"1490aab7-f46f-4864-8563-14fe3a4d3dbb"],
-Cell[38432, 1034, 1391, 40, 73, "Input",ExpressionUUID->"13250c58-092d-49b6-86ee-9c07c67541e7"],
-Cell[39826, 1076, 1764, 47, 73, "Input",ExpressionUUID->"89eb3539-b9d1-4d8f-b5db-8660dd1148b7"]
+Cell[26627, 693, 187, 3, 47, "Subsection",ExpressionUUID->"23e1325e-fd12-487c-8359-985b389f9aba"],
+Cell[26817, 698, 185, 4, 37, "Input",ExpressionUUID->"b19540fc-82e5-4e9c-b114-d9202812d92d"],
+Cell[27005, 704, 653, 13, 110, "Input",ExpressionUUID->"bcbb9c07-1bc7-47e0-b215-42a8076be7ae"],
+Cell[27661, 719, 3890, 100, 121, "Input",ExpressionUUID->"d1182081-610f-4f60-8ba1-8f30d8be51e7"],
+Cell[31554, 821, 2084, 57, 72, "Input",ExpressionUUID->"fbb8af79-6d83-4005-ab86-9761e51d3602"],
+Cell[33641, 880, 4930, 141, 202, "Input",ExpressionUUID->"eb4da150-fce9-4dbb-904f-a8f1d6af739f"],
+Cell[38574, 1023, 2060, 58, 72, "Input",ExpressionUUID->"1490aab7-f46f-4864-8563-14fe3a4d3dbb"],
+Cell[40637, 1083, 1391, 40, 72, "Input",ExpressionUUID->"13250c58-092d-49b6-86ee-9c07c67541e7"],
+Cell[42031, 1125, 1764, 47, 71, "Input",ExpressionUUID->"89eb3539-b9d1-4d8f-b5db-8660dd1148b7"]
 }, Open  ]],
-Cell[41605, 1126, 151, 3, 67, "Subsection",ExpressionUUID->"698fcd27-e4f6-4ed5-9213-f8a408d39c41"]
+Cell[CellGroupData[{
+Cell[43832, 1177, 151, 3, 67, "Subsection",ExpressionUUID->"698fcd27-e4f6-4ed5-9213-f8a408d39c41"],
+Cell[43986, 1182, 265, 4, 37, "Input",ExpressionUUID->"6bd95942-22ad-443c-bd6b-a2100818cae8"],
+Cell[44254, 1188, 160, 3, 37, "Input",ExpressionUUID->"a7b18f55-9885-4054-a0bb-32cbde2922a8"],
+Cell[44417, 1193, 156, 3, 37, "Input",ExpressionUUID->"92cbcdac-df94-4f0a-b74d-bcd1c61f6e67"],
+Cell[CellGroupData[{
+Cell[44598, 1200, 678, 10, 37, "Input",ExpressionUUID->"c58f05bd-007a-4fc4-b92a-9c33305acd7f"],
+Cell[45279, 1212, 14347, 378, 438, "Print",ExpressionUUID->"e0e46282-888e-4038-b3ff-e00fc532433b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59663, 1595, 228, 3, 37, "Input",ExpressionUUID->"cce27441-02aa-465b-b9ff-bcf02c82f6af"],
+Cell[59894, 1600, 524, 11, 29, "Message",ExpressionUUID->"06c196e7-85c5-471f-8d57-839f99e2c918"],
+Cell[60421, 1613, 357, 9, 29, "Message",ExpressionUUID->"43b901f4-b306-4642-b43b-d9e87fae847c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60815, 1627, 214, 2, 37, "Input",ExpressionUUID->"ca91346d-36aa-44b1-bb14-10c772d8bf20"],
+Cell[61032, 1631, 231, 3, 41, "Output",ExpressionUUID->"90d4d87d-3740-45ce-b36d-92910cf41442"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61300, 1639, 5167, 125, 542, "Input",ExpressionUUID->"547f1b69-c301-4af1-ba04-1a4e9075868e"],
+Cell[66470, 1766, 87, 0, 41, "Output",ExpressionUUID->"53379573-3dab-4234-9418-1592585a589d"],
+Cell[66560, 1768, 87, 0, 41, "Output",ExpressionUUID->"7d3120d6-b6dc-4434-bcd5-441afe50cded"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
