@@ -1,0 +1,358 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16972,        350]
+NotebookOptionsPosition[     15135,        318]
+NotebookOutlinePosition[     15486,        334]
+CellTagsIndexPosition[     15443,        331]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"PacletDirectoryAdd", "[", 
+  RowBox[{"FileNameJoin", "@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     "\"\<mathematica-BTools\>\""}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"PacletInstall", "[", "\"\<BTools\>\"", " ", "]"}]}], "Input",
+ CellChangeTimes->{{3.744601316137328*^9, 3.744601327815275*^9}, {
+   3.74460138468574*^9, 3.744601422372931*^9}, {3.7446017605822*^9, 
+   3.74460178917047*^9}, {3.744601889173326*^9, 3.744601912022726*^9}, {
+   3.744605255631941*^9, 3.744605259179963*^9}, {3.744605329395062*^9, 
+   3.744605472069056*^9}, {3.744605579895442*^9, 3.744605604160843*^9}, {
+   3.744605778994698*^9, 3.7446058027881927`*^9}, {3.744607323580317*^9, 
+   3.744607329261429*^9}, {3.74460737558488*^9, 3.74460739395774*^9}, {
+   3.7446075959891777`*^9, 3.744607641209405*^9}, {3.7446076922077713`*^9, 
+   3.744607731796064*^9}, {3.744614068254816*^9, 3.744614070275144*^9}, 
+   3.744620743356503*^9},ExpressionUUID->"3596ebf8-ce99-4b40-83ec-\
+644a938d3d32"],
+
+Cell[BoxData[
+ RowBox[{"RebuildPacletData", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.744601316137328*^9, 3.744601327815275*^9}, {
+   3.74460138468574*^9, 3.744601422372931*^9}, {3.7446017605822*^9, 
+   3.74460178917047*^9}, {3.744601889173326*^9, 3.744601912022726*^9}, {
+   3.744605255631941*^9, 3.744605259179963*^9}, {3.744605329395062*^9, 
+   3.744605472069056*^9}, {3.744605579895442*^9, 3.744605604160843*^9}, {
+   3.744605778994698*^9, 3.7446058027881927`*^9}, {3.744607323580317*^9, 
+   3.744607329261429*^9}, {3.74460737558488*^9, 3.74460739395774*^9}, {
+   3.7446075959891777`*^9, 3.744607641209405*^9}, {3.7446076922077713`*^9, 
+   3.744607731796064*^9}, {3.744614068254816*^9, 3.744614070275144*^9}, 
+   3.744620743356503*^9},
+ CellLabel->
+  "In[158]:=",ExpressionUUID->"82bcd510-ae34-4682-85e7-015eeeaeae7f"],
+
+Cell[BoxData[
+ RowBox[{"PacletDirectoryRemove", "[", 
+  RowBox[{"FileNameJoin", "@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     "\"\<mathematica-BTools\>\""}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.744615789430644*^9, 3.7446158251970387`*^9}, {
+  3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
+  3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
+  3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
+  3.74461682786198*^9}},ExpressionUUID->"c7840212-1b38-40fc-bd83-\
+2ecb3dbbd87c"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "[", "\"\<BTools\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.744615789430644*^9, 3.7446158251970387`*^9}, {
+  3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
+  3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
+  3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
+  3.7446168654842863`*^9}, {3.744617057800881*^9, 3.744617064839663*^9}},
+ CellLabel->
+  "In[632]:=",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"PacletInstall", "@", 
+  RowBox[{"PackPaclet", " ", "[", 
+   RowBox[{"FileNameJoin", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+      "\"\<mathematica-BTools\>\""}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"RebuildPacletData", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.744615789430644*^9, 3.7446158251970387`*^9}, {
+  3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
+  3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
+  3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
+  3.7446168654842863`*^9}, {3.744617057800881*^9, 3.744617064839663*^9}},
+ CellLabel->
+  "In[559]:=",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "Paclet", "[", "\<\"BTools\"\>", ",", "\<\"2.1.29\"\>", ",", "<>", "]"}],
+  PacletManager`Paclet[
+  "Name" -> "BTools", "Version" -> "2.1.29", "Creator" -> "b3m2a1@gmail.com", 
+   "URL" -> "https://github.com/b3m2a1/mathematica-BTools", "Description" -> 
+   "A suite of development tools", "Thumbnail" -> "PacletIcon.png", 
+   "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"BTools`"}}, {
+     "Resource", "Root" -> "Resources", 
+      "Resources" -> {
+       "Icons", "PaletteGenerators", "Templates", "Themes", {
+        "PacletIcon", "Icons/PacletIcon.png"}, {
+        "PacletSiteIcon", "Icons/PacletSiteIcon.png"}, {
+        "AppManagerPaletteGenerator", 
+         "PaletteGenerators/AppManagerPaletteGenerator.nb"}, {
+        "CuratedDataHelperGenerator", 
+         "PaletteGenerators/CuratedDataHelperGenerator.nb"}, {
+        "DocumentationGenerator", 
+         "PaletteGenerators/DocumentationGenerator.nb"}, {
+        "EncodedCacheManagerGenerator", 
+         "PaletteGenerators/EncodedCacheManagerGenerator.nb"}, {
+        "HTMLHelperGenerator", "PaletteGenerators/HTMLHelperGenerator.nb"}, {
+        "PacletServerManagerGenerator", 
+         "PaletteGenerators/PacletServerManagerGenerator.nb"}, {
+        "PaletteTemplate", "PaletteGenerators/PaletteTemplate.nb"}, {
+        "PelicanHelperGenerator", 
+         "PaletteGenerators/PelicanHelperGenerator.nb"}, {
+        "ServiceConnectionHelperGenerator", 
+         "PaletteGenerators/ServiceConnectionHelperGenerator.nb"}, {
+        "SiteBuilderGenerator", 
+         "PaletteGenerators/SiteBuilderGenerator.nb"}, {
+        "ContextLoader", "Templates/ContextLoader.wl"}, {
+        "CuratedDataTemplate", "Templates/CuratedDataTemplate.nb"}, {
+        "Autocomplete", "Templates/Initialization/Autocomplete.wl"}, {
+        "Constants", "Templates/Initialization/Constants.wl"}, {
+        "Dependencies", "Templates/Initialization/Dependencies.wl"}, {
+        "Exceptions", "Templates/Initialization/Exceptions.wl"}, {
+        "FrontEnd", "Templates/Initialization/FrontEnd.wl"}, {
+        "init", "Templates/Initialization/init.wl"}, {
+        "Loading", "Templates/Initialization/Loading.wl"}, {
+        "Paths", "Templates/Initialization/Paths.wl"}, {
+        "README", "Templates/README.nb"}, {
+        "ServiceConnectionTemplate", 
+         "Templates/ServiceConnectionTemplate.nb"}, {
+        "Frameworks", "Templates/Frameworks"}, {
+        "CuratedData", "Templates/Frameworks/CuratedData"}, {
+        "$ServiceConnection", "Templates/Frameworks/$ServiceConnection"}, {
+        "Initialization", "Templates/Initialization"}, {
+        "SiteBuilder", "Templates/SiteBuilder"}, {
+        "DocumentationSite", "Templates/SiteBuilder/DocumentationSite"}, {
+        "PacletServer", "Templates/SiteBuilder/PacletServer"}, {
+        "TutorialSite", "Templates/SiteBuilder/TutorialSite"}, {
+        "WebSite", "Templates/SiteBuilder/WebSite"}, {
+        "template_lib", "Themes/template_lib"}, {
+        "include", "Themes/template_lib/include"}, {
+        "static", "Themes/template_lib/static"}, {
+        "templates", "Themes/template_lib/templates"}, {
+        "tipuesearch", "Themes/template_lib/tipuesearch"}}}, {
+     "FrontEnd", "Prepend" -> True}, {
+     "PacletServer", 
+      "Tags" -> {"documentation", "front-end", "paclets", "web"}, 
+      "Categories" -> {"Development"}, "Description" -> 
+      "A general purpose package that implements useful functionality for \
+application development.\nFeatures include: distribution tools, documentation \
+generation, front-end manipulation, and application editing\n  ", "License" -> 
+      "MIT"}}, "Location" -> 
+   "/Users/thoughtworks/Library/Mathematica/Paclets/Repository/BTools-2.1.29"]\
+]], "Output",
+ CellChangeTimes->{3.7446206921075563`*^9, 3.744620942016555*^9, 
+  3.744621015061302*^9, 3.744621531012899*^9},
+ CellLabel->
+  "Out[559]=",ExpressionUUID->"9dd73017-2b2a-403c-a562-2afd27183b55"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"RebuildPacletData", "[", "]"}]], "Input",
+ CellLabel->
+  "In[648]:=",ExpressionUUID->"43e108e4-8d7d-4aec-94cf-325312b642f8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "Paclet", "[", "\"\<BTools\>\"", ",", "\"\<2.1.29\>\"", ",", "<>", "]"}],
+  PacletManager`Paclet[
+  "Name" -> "BTools", "Version" -> "2.1.29", "Creator" -> "b3m2a1@gmail.com", 
+   "URL" -> "https://github.com/b3m2a1/mathematica-BTools", "Description" -> 
+   "A suite of development tools", "Thumbnail" -> "PacletIcon.png", 
+   "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"BTools`"}}, {
+     "Resource", "Root" -> "Resources", 
+      "Resources" -> {
+       "Icons", "PaletteGenerators", "Templates", "Themes", {
+        "PacletIcon", "Icons/PacletIcon.png"}, {
+        "PacletSiteIcon", "Icons/PacletSiteIcon.png"}, {
+        "AppManagerPaletteGenerator", 
+         "PaletteGenerators/AppManagerPaletteGenerator.nb"}, {
+        "CuratedDataHelperGenerator", 
+         "PaletteGenerators/CuratedDataHelperGenerator.nb"}, {
+        "DocumentationGenerator", 
+         "PaletteGenerators/DocumentationGenerator.nb"}, {
+        "EncodedCacheManagerGenerator", 
+         "PaletteGenerators/EncodedCacheManagerGenerator.nb"}, {
+        "HTMLHelperGenerator", "PaletteGenerators/HTMLHelperGenerator.nb"}, {
+        "PacletServerManagerGenerator", 
+         "PaletteGenerators/PacletServerManagerGenerator.nb"}, {
+        "PaletteTemplate", "PaletteGenerators/PaletteTemplate.nb"}, {
+        "PelicanHelperGenerator", 
+         "PaletteGenerators/PelicanHelperGenerator.nb"}, {
+        "ServiceConnectionHelperGenerator", 
+         "PaletteGenerators/ServiceConnectionHelperGenerator.nb"}, {
+        "SiteBuilderGenerator", 
+         "PaletteGenerators/SiteBuilderGenerator.nb"}, {
+        "ContextLoader", "Templates/ContextLoader.wl"}, {
+        "CuratedDataTemplate", "Templates/CuratedDataTemplate.nb"}, {
+        "Autocomplete", "Templates/Initialization/Autocomplete.wl"}, {
+        "Constants", "Templates/Initialization/Constants.wl"}, {
+        "Dependencies", "Templates/Initialization/Dependencies.wl"}, {
+        "Exceptions", "Templates/Initialization/Exceptions.wl"}, {
+        "FrontEnd", "Templates/Initialization/FrontEnd.wl"}, {
+        "init", "Templates/Initialization/init.wl"}, {
+        "Loading", "Templates/Initialization/Loading.wl"}, {
+        "Paths", "Templates/Initialization/Paths.wl"}, {
+        "README", "Templates/README.nb"}, {
+        "ServiceConnectionTemplate", 
+         "Templates/ServiceConnectionTemplate.nb"}, {
+        "Frameworks", "Templates/Frameworks"}, {
+        "CuratedData", "Templates/Frameworks/CuratedData"}, {
+        "$ServiceConnection", "Templates/Frameworks/$ServiceConnection"}, {
+        "Initialization", "Templates/Initialization"}, {
+        "SiteBuilder", "Templates/SiteBuilder"}, {
+        "DocumentationSite", "Templates/SiteBuilder/DocumentationSite"}, {
+        "PacletServer", "Templates/SiteBuilder/PacletServer"}, {
+        "TutorialSite", "Templates/SiteBuilder/TutorialSite"}, {
+        "WebSite", "Templates/SiteBuilder/WebSite"}, {
+        "template_lib", "Themes/template_lib"}, {
+        "include", "Themes/template_lib/include"}, {
+        "static", "Themes/template_lib/static"}, {
+        "templates", "Themes/template_lib/templates"}, {
+        "tipuesearch", "Themes/template_lib/tipuesearch"}}}, {
+     "FrontEnd", "Prepend" -> True}, {
+     "PacletServer", 
+      "Tags" -> {"documentation", "front-end", "paclets", "web"}, 
+      "Categories" -> {"Development"}, "Description" -> 
+      "A general purpose package that implements useful functionality for \
+application development.\nFeatures include: distribution tools, documentation \
+generation, front-end manipulation, and application editing\n  ", "License" -> 
+      "MIT"}}, "Location" -> 
+   "/Users/thoughtworks/dev/workspace/mathematica/mathematica-BTools"]]], \
+"Input",
+ CellChangeTimes->{{3.744607754567581*^9, 
+  3.744607760634572*^9}},ExpressionUUID->"35038973-eee7-4757-bd18-\
+95eb8e2927cd"],
+
+Cell[BoxData[
+ RowBox[{"??", "PacletManager`*"}]], "Input",
+ CellChangeTimes->{{3.744607754567581*^9, 3.744607760634572*^9}, {
+  3.744607804097637*^9, 3.744607813379718*^9}},
+ CellLabel->
+  "In[129]:=",ExpressionUUID->"5df4eb1e-8d39-47bf-950b-5128918a37aa"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Mathematica`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.744609815976433*^9, 3.744609834993483*^9}, {
+  3.7446124453412848`*^9, 3.744612446368145*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"7e42b294-f16a-435b-879c-e1e95b5a59bf"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<BTools\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.744608028256316*^9, 3.744608044217306*^9}, {
+  3.744608104622694*^9, 3.744608104760819*^9}},
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"28a3d076-8f82-4f07-a16b-c227dc9a6dec"],
+
+Cell[BoxData["\"\<file:///Users/thoughtworks/dev/workspace/mathematica/\
+mathematica-BTools\>\""], "Input",
+ CellChangeTimes->{{3.744602780884232*^9, 3.744602787520299*^9}, {
+  3.744606048071926*^9, 3.744606053076248*^9}},
+ CellLabel->
+  "In[116]:=",ExpressionUUID->"772f3ddf-9472-4d57-8e81-26f40a3b5d99"],
+
+Cell[BoxData[
+ RowBox[{"PacletInstall", "[", 
+  RowBox[{"\"\<BTools\>\"", ",", " ", 
+   RowBox[{
+   "\"\<Site\>\"", "\[Rule]", 
+    "\"\<file:///Users/thoughtworks/dev/workspace/mathematica/mathematica-\
+BTools\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.744605642722002*^9, 3.744605694542688*^9}, 
+   3.744605740828147*^9, {3.74460607016438*^9, 3.744606107413034*^9}, 
+   3.744606197174464*^9},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"9cf155d8-034e-41e0-bdda-e517d652a546"],
+
+Cell[BoxData[
+ RowBox[{"??", "*Paclet*"}]], "Input",
+ CellChangeTimes->{{3.744615879484907*^9, 3.7446159129593267`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"49019ce2-ac6b-4842-b87c-2798b8706591"],
+
+Cell[BoxData[{"\"\<file:///Users/thoughtworks/dev/workspace/mathematica/\
+mathematica-BTools\>\"", "\[IndentingNewLine]", 
+ RowBox[{"FileNames", "[", 
+  RowBox[{
+  "\"\<*\>\"", ",", 
+   "\"\</Users/thoughtworks/dev/workspace/mathematica/mathematica-BTools\>\""}\
+], "]"}]}], "Input",
+ CellChangeTimes->{{3.744605932753606*^9, 3.744605985878468*^9}},
+ CellLabel->
+  "In[114]:=",ExpressionUUID->"c76a8dd2-fda3-475c-837c-91c96734c0c3"],
+
+Cell[BoxData[
+ RowBox[{"PrintDefinitions", "[", "PacletDirectoryAdd", "]"}]], "Input",
+ CellChangeTimes->{{3.744606821090624*^9, 3.744606831056488*^9}, 
+   3.744607659380433*^9},
+ CellLabel->
+  "In[126]:=",ExpressionUUID->"142e8b09-b2a8-4cf5-b0fe-a3c8dee40d2d"],
+
+Cell[BoxData["$Packages"], "Input",
+ CellChangeTimes->{{3.744612588750951*^9, 3.7446125944603643`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"362f2611-99d4-43a5-a1d4-31b24ae022c8"]
+},
+WindowSize->{720, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"BStyle.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1047, 18, 54, "Input",ExpressionUUID->"3596ebf8-ce99-4b40-83ec-644a938d3d32"],
+Cell[1608, 40, 824, 13, 32, "Input",ExpressionUUID->"82bcd510-ae34-4682-85e7-015eeeaeae7f"],
+Cell[2435, 55, 608, 12, 54, "Input",ExpressionUUID->"c7840212-1b38-40fc-bd83-2ecb3dbbd87c"],
+Cell[3046, 69, 534, 8, 32, "Input",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
+Cell[CellGroupData[{
+Cell[3605, 81, 785, 15, 75, "Input",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
+Cell[4393, 98, 3977, 72, 36, "Output",ExpressionUUID->"9dd73017-2b2a-403c-a562-2afd27183b55"]
+}, Open  ]],
+Cell[8385, 173, 148, 3, 32, "Input",ExpressionUUID->"43e108e4-8d7d-4aec-94cf-325312b642f8"],
+Cell[8536, 178, 3898, 71, 32, "Input",ExpressionUUID->"35038973-eee7-4757-bd18-95eb8e2927cd"],
+Cell[12437, 251, 257, 5, 32, "Input",ExpressionUUID->"5df4eb1e-8d39-47bf-950b-5128918a37aa"],
+Cell[12697, 258, 272, 4, 32, "Input",ExpressionUUID->"7e42b294-f16a-435b-879c-e1e95b5a59bf"],
+Cell[12972, 264, 281, 5, 32, "Input",ExpressionUUID->"28a3d076-8f82-4f07-a16b-c227dc9a6dec"],
+Cell[13256, 271, 305, 5, 32, "Input",ExpressionUUID->"772f3ddf-9472-4d57-8e81-26f40a3b5d99"],
+Cell[13564, 278, 483, 11, 75, "Input",ExpressionUUID->"9cf155d8-034e-41e0-bdda-e517d652a546"],
+Cell[14050, 291, 198, 3, 32, "Input",ExpressionUUID->"49019ce2-ac6b-4842-b87c-2798b8706591"],
+Cell[14251, 296, 432, 9, 75, "Input",ExpressionUUID->"c76a8dd2-fda3-475c-837c-91c96734c0c3"],
+Cell[14686, 307, 261, 5, 32, "Input",ExpressionUUID->"142e8b09-b2a8-4cf5-b0fe-a3c8dee40d2d"],
+Cell[14950, 314, 181, 2, 32, "Input",ExpressionUUID->"362f2611-99d4-43a5-a1d4-31b24ae022c8"]
+}
+]
+*)
+
