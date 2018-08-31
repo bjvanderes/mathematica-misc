@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16972,        350]
-NotebookOptionsPosition[     15135,        318]
-NotebookOutlinePosition[     15486,        334]
-CellTagsIndexPosition[     15443,        331]
+NotebookDataLength[     49545,       1282]
+NotebookOptionsPosition[     45516,       1207]
+NotebookOutlinePosition[     46638,       1238]
+CellTagsIndexPosition[     46506,       1232]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,13 +58,15 @@ Cell[BoxData[
   RowBox[{"FileNameJoin", "@", 
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     RowBox[{"ParentDirectory", "@", 
+      RowBox[{"NotebookDirectory", "[", "]"}]}], ",", 
      "\"\<mathematica-BTools\>\""}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.744615789430644*^9, 3.7446158251970387`*^9}, {
-  3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
-  3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
-  3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
-  3.74461682786198*^9}},ExpressionUUID->"c7840212-1b38-40fc-bd83-\
+   3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
+   3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
+   3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
+   3.74461682786198*^9}, 
+   3.744665626584012*^9},ExpressionUUID->"c7840212-1b38-40fc-bd83-\
 2ecb3dbbd87c"],
 
 Cell[BoxData[
@@ -74,27 +76,28 @@ Cell[BoxData[
   3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
   3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
   3.7446168654842863`*^9}, {3.744617057800881*^9, 3.744617064839663*^9}},
- CellLabel->
-  "In[632]:=",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
+ CellLabel->"In[16]:=",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{"PacletInstall", "@", 
-  RowBox[{"PackPaclet", " ", "[", 
+  RowBox[{"PackPaclet", "[", 
    RowBox[{"FileNameJoin", "@", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-      "\"\<mathematica-BTools\>\""}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+      RowBox[{"ParentDirectory", "@", 
+       RowBox[{"NotebookDirectory", "[", "]"}]}], ",", "\"\<BTools\>\""}], 
+     "}"}]}], "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"RebuildPacletData", "[", "]"}]}], "Input",
  CellChangeTimes->{{3.744615789430644*^9, 3.7446158251970387`*^9}, {
-  3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
-  3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
-  3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
-  3.7446168654842863`*^9}, {3.744617057800881*^9, 3.744617064839663*^9}},
- CellLabel->
-  "In[559]:=",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
+   3.7446159438738956`*^9, 3.7446159454717073`*^9}, {3.7446164336818027`*^9, 
+   3.7446164644157343`*^9}, {3.7446165174861393`*^9, 3.744616583005847*^9}, {
+   3.7446166133069687`*^9, 3.744616633501936*^9}, {3.744616793419153*^9, 
+   3.7446168654842863`*^9}, {3.744617057800881*^9, 3.744617064839663*^9}, 
+   3.744665304107687*^9, {3.74466539853735*^9, 3.7446654947729363`*^9}, 
+   3.744665637365879*^9, 3.7446674559833603`*^9, 3.744672417813917*^9},
+ CellLabel->"In[17]:=",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -160,15 +163,14 @@ Cell[BoxData[
       "Tags" -> {"documentation", "front-end", "paclets", "web"}, 
       "Categories" -> {"Development"}, "Description" -> 
       "A general purpose package that implements useful functionality for \
-application development.\nFeatures include: distribution tools, documentation \
-generation, front-end manipulation, and application editing\n  ", "License" -> 
-      "MIT"}}, "Location" -> 
-   "/Users/thoughtworks/Library/Mathematica/Paclets/Repository/BTools-2.1.29"]\
-]], "Output",
- CellChangeTimes->{3.7446206921075563`*^9, 3.744620942016555*^9, 
-  3.744621015061302*^9, 3.744621531012899*^9},
- CellLabel->
-  "Out[559]=",ExpressionUUID->"9dd73017-2b2a-403c-a562-2afd27183b55"]
+application development.\n\nFeatures include: distribution tools, \
+documentation generation, front-end manipulation, and application editing\n\n \
+ ", "License" -> "MIT"}}, "Location" -> 
+   "C:\\Users\\Brendan\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\\
+BTools-2.1.29"]]], "Output",
+ CellChangeTimes->{3.744665496542915*^9, 3.744665643533804*^9, 
+  3.744667463875264*^9, 3.7446686914174185`*^9, 3.7446724241088405`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"bbe3265c-ea3a-4a55-8ce6-4ae3d1d1a719"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -177,181 +179,1111 @@ Cell[BoxData[
   "In[648]:=",ExpressionUUID->"43e108e4-8d7d-4aec-94cf-325312b642f8"],
 
 Cell[BoxData[
- InterpretationBox[
-  RowBox[{
-  "Paclet", "[", "\"\<BTools\>\"", ",", "\"\<2.1.29\>\"", ",", "<>", "]"}],
-  PacletManager`Paclet[
-  "Name" -> "BTools", "Version" -> "2.1.29", "Creator" -> "b3m2a1@gmail.com", 
-   "URL" -> "https://github.com/b3m2a1/mathematica-BTools", "Description" -> 
-   "A suite of development tools", "Thumbnail" -> "PacletIcon.png", 
-   "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"BTools`"}}, {
-     "Resource", "Root" -> "Resources", 
-      "Resources" -> {
-       "Icons", "PaletteGenerators", "Templates", "Themes", {
-        "PacletIcon", "Icons/PacletIcon.png"}, {
-        "PacletSiteIcon", "Icons/PacletSiteIcon.png"}, {
-        "AppManagerPaletteGenerator", 
-         "PaletteGenerators/AppManagerPaletteGenerator.nb"}, {
-        "CuratedDataHelperGenerator", 
-         "PaletteGenerators/CuratedDataHelperGenerator.nb"}, {
-        "DocumentationGenerator", 
-         "PaletteGenerators/DocumentationGenerator.nb"}, {
-        "EncodedCacheManagerGenerator", 
-         "PaletteGenerators/EncodedCacheManagerGenerator.nb"}, {
-        "HTMLHelperGenerator", "PaletteGenerators/HTMLHelperGenerator.nb"}, {
-        "PacletServerManagerGenerator", 
-         "PaletteGenerators/PacletServerManagerGenerator.nb"}, {
-        "PaletteTemplate", "PaletteGenerators/PaletteTemplate.nb"}, {
-        "PelicanHelperGenerator", 
-         "PaletteGenerators/PelicanHelperGenerator.nb"}, {
-        "ServiceConnectionHelperGenerator", 
-         "PaletteGenerators/ServiceConnectionHelperGenerator.nb"}, {
-        "SiteBuilderGenerator", 
-         "PaletteGenerators/SiteBuilderGenerator.nb"}, {
-        "ContextLoader", "Templates/ContextLoader.wl"}, {
-        "CuratedDataTemplate", "Templates/CuratedDataTemplate.nb"}, {
-        "Autocomplete", "Templates/Initialization/Autocomplete.wl"}, {
-        "Constants", "Templates/Initialization/Constants.wl"}, {
-        "Dependencies", "Templates/Initialization/Dependencies.wl"}, {
-        "Exceptions", "Templates/Initialization/Exceptions.wl"}, {
-        "FrontEnd", "Templates/Initialization/FrontEnd.wl"}, {
-        "init", "Templates/Initialization/init.wl"}, {
-        "Loading", "Templates/Initialization/Loading.wl"}, {
-        "Paths", "Templates/Initialization/Paths.wl"}, {
-        "README", "Templates/README.nb"}, {
-        "ServiceConnectionTemplate", 
-         "Templates/ServiceConnectionTemplate.nb"}, {
-        "Frameworks", "Templates/Frameworks"}, {
-        "CuratedData", "Templates/Frameworks/CuratedData"}, {
-        "$ServiceConnection", "Templates/Frameworks/$ServiceConnection"}, {
-        "Initialization", "Templates/Initialization"}, {
-        "SiteBuilder", "Templates/SiteBuilder"}, {
-        "DocumentationSite", "Templates/SiteBuilder/DocumentationSite"}, {
-        "PacletServer", "Templates/SiteBuilder/PacletServer"}, {
-        "TutorialSite", "Templates/SiteBuilder/TutorialSite"}, {
-        "WebSite", "Templates/SiteBuilder/WebSite"}, {
-        "template_lib", "Themes/template_lib"}, {
-        "include", "Themes/template_lib/include"}, {
-        "static", "Themes/template_lib/static"}, {
-        "templates", "Themes/template_lib/templates"}, {
-        "tipuesearch", "Themes/template_lib/tipuesearch"}}}, {
-     "FrontEnd", "Prepend" -> True}, {
-     "PacletServer", 
-      "Tags" -> {"documentation", "front-end", "paclets", "web"}, 
-      "Categories" -> {"Development"}, "Description" -> 
-      "A general purpose package that implements useful functionality for \
-application development.\nFeatures include: distribution tools, documentation \
-generation, front-end manipulation, and application editing\n  ", "License" -> 
-      "MIT"}}, "Location" -> 
-   "/Users/thoughtworks/dev/workspace/mathematica/mathematica-BTools"]]], \
-"Input",
- CellChangeTimes->{{3.744607754567581*^9, 
-  3.744607760634572*^9}},ExpressionUUID->"35038973-eee7-4757-bd18-\
-95eb8e2927cd"],
-
-Cell[BoxData[
  RowBox[{"??", "PacletManager`*"}]], "Input",
  CellChangeTimes->{{3.744607754567581*^9, 3.744607760634572*^9}, {
   3.744607804097637*^9, 3.744607813379718*^9}},
  CellLabel->
   "In[129]:=",ExpressionUUID->"5df4eb1e-8d39-47bf-950b-5128918a37aa"],
 
-Cell[BoxData[
- RowBox[{"Needs", "[", "\"\<Mathematica`\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.744609815976433*^9, 3.744609834993483*^9}, {
-  3.7446124453412848`*^9, 3.744612446368145*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"7e42b294-f16a-435b-879c-e1e95b5a59bf"],
+Cell[BoxData["File"], "Input",
+ CellChangeTimes->{{3.7446700941118517`*^9, 
+  3.7446700970658684`*^9}},ExpressionUUID->"4fda79f8-ca31-4b1e-b2b8-\
+ab6e4c9ba5cb"],
+
+Cell[BoxData["$FEKeyEvents"], "Input",
+ CellChangeTimes->{{3.7446718420443277`*^9, 3.7446718609750967`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"8d5f7e5d-88be-4fea-897a-1fc85e8b849d"],
 
 Cell[BoxData[
- RowBox[{"PacletInformation", "[", "\"\<BTools\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.744608028256316*^9, 3.744608044217306*^9}, {
-  3.744608104622694*^9, 3.744608104760819*^9}},
- CellLabel->
-  "In[131]:=",ExpressionUUID->"28a3d076-8f82-4f07-a16b-c227dc9a6dec"],
-
-Cell[BoxData["\"\<file:///Users/thoughtworks/dev/workspace/mathematica/\
-mathematica-BTools\>\""], "Input",
- CellChangeTimes->{{3.744602780884232*^9, 3.744602787520299*^9}, {
-  3.744606048071926*^9, 3.744606053076248*^9}},
- CellLabel->
-  "In[116]:=",ExpressionUUID->"772f3ddf-9472-4d57-8e81-26f40a3b5d99"],
+ RowBox[{"??", "*"}]], "Input",
+ CellChangeTimes->{{3.7446718676840143`*^9, 3.744671870076038*^9}, {
+  3.7446719619067106`*^9, 3.744671984345386*^9}, {3.744672027915125*^9, 
+  3.744672070320607*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"a7df9bce-9a55-4b7d-a7bc-cb9f6998a793"],
 
 Cell[BoxData[
- RowBox[{"PacletInstall", "[", 
-  RowBox[{"\"\<BTools\>\"", ",", " ", 
+ RowBox[{"<<", "BTools`"}]], "Input",
+ CellChangeTimes->{{3.7446718826518316`*^9, 3.744671895694727*^9}, {
+  3.7446721510467186`*^9, 3.744672154908291*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"04c1d1da-7923-44e4-bc4e-5ef7d43877c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "*`$FEKeyEvents"}]], "Input",
+ CellChangeTimes->{{3.744672160822338*^9, 3.744672164034341*^9}, {
+  3.7446732169582386`*^9, 3.7446732388340225`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"177430ad-21fb-4456-a29e-2c52c4207c97"],
+
+Cell[BoxData[{
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
    RowBox[{
-   "\"\<Site\>\"", "\[Rule]", 
-    "\"\<file:///Users/thoughtworks/dev/workspace/mathematica/mathematica-\
-BTools\>\""}]}], "]"}]], "Input",
- CellChangeTimes->{{3.744605642722002*^9, 3.744605694542688*^9}, 
-   3.744605740828147*^9, {3.74460607016438*^9, 3.744606107413034*^9}, 
-   3.744606197174464*^9},
- CellLabel->
-  "In[123]:=",ExpressionUUID->"9cf155d8-034e-41e0-bdda-e517d652a546"],
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["Global`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["Global`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {"$FEKeyEvents", "Global`"}},
+          ButtonNote->"Global`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["BTools`BTools`TRTools`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["BTools`BTools`TRTools`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {
+            "$FEKeyEvents", "BTools`BTools`TRTools`"}},
+          ButtonNote->"BTools`BTools`TRTools`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["BTools`TRTools`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["BTools`TRTools`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {"$FEKeyEvents", "BTools`TRTools`"}},
+          ButtonNote->"BTools`TRTools`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["BTools`TRTools`BTools`TRTools`", "InfoHeading"]}], True->
+   GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["BTools`TRTools`BTools`TRTools`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {
+            "$FEKeyEvents", "BTools`TRTools`BTools`TRTools`"}},
+          ButtonNote->"BTools`TRTools`BTools`TRTools`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["BTools`Utilities`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["BTools`Utilities`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {"$FEKeyEvents", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["TRTools`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["TRTools`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {"$FEKeyEvents", "TRTools`"}},
+          ButtonNote->"TRTools`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["TRTools`TRTools`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["TRTools`TRTools`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info233744658840-7340464", {"$FEKeyEvents", "TRTools`TRTools`"}},
+          ButtonNote->"TRTools`TRTools`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]}], "Print", "InfoCell",
+ CellChangeTimes->{
+  3.744673240284953*^9},ExpressionUUID->"6ee3a1dc-97ce-441f-b02b-\
+f3416118aed5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"??", "*Paclet*"}]], "Input",
- CellChangeTimes->{{3.744615879484907*^9, 3.7446159129593267`*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"49019ce2-ac6b-4842-b87c-2798b8706591"],
+ RowBox[{"??", "*`TRTools"}]], "Input",
+ CellChangeTimes->{{3.7446731966295424`*^9, 3.7446732071463904`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"418186b9-aa04-4a43-9754-f37141bdb926"],
 
-Cell[BoxData[{"\"\<file:///Users/thoughtworks/dev/workspace/mathematica/\
-mathematica-BTools\>\"", "\[IndentingNewLine]", 
- RowBox[{"FileNames", "[", 
-  RowBox[{
-  "\"\<*\>\"", ",", 
-   "\"\</Users/thoughtworks/dev/workspace/mathematica/mathematica-BTools\>\""}\
-], "]"}]}], "Input",
- CellChangeTimes->{{3.744605932753606*^9, 3.744605985878468*^9}},
- CellLabel->
-  "In[114]:=",ExpressionUUID->"c76a8dd2-fda3-475c-837c-91c96734c0c3"],
+Cell["BTools`BTools`TRTools", "Print", "PrintUsage",
+ CellChangeTimes->{3.744673208110378*^9},
+ CellTags->
+  "Info213744658808-7340464",ExpressionUUID->"40097421-6024-4679-86b5-\
+1ed6b8a1ea2c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"PrintDefinitions", "[", "PacletDirectoryAdd", "]"}]], "Input",
- CellChangeTimes->{{3.744606821090624*^9, 3.744606831056488*^9}, 
-   3.744607659380433*^9},
- CellLabel->
-  "In[126]:=",ExpressionUUID->"142e8b09-b2a8-4cf5-b0fe-a3c8dee40d2d"],
+ RowBox[{"??", "BTools`Utilities`*"}]], "Input",
+ CellChangeTimes->{{3.7446732590207243`*^9, 3.7446732685036683`*^9}, {
+  3.7446733441398673`*^9, 3.744673346868781*^9}, {3.744673912983823*^9, 
+  3.7446739266766043`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"daca856b-b8e5-4f5f-bf5c-0b121bc90b25"],
 
-Cell[BoxData["$Packages"], "Input",
- CellChangeTimes->{{3.744612588750951*^9, 3.7446125944603643`*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"362f2611-99d4-43a5-a1d4-31b24ae022c8"]
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["BTools`Utilities`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["BTools`Utilities`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["CtxFind",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"CtxFind", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEClickMouse",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEClickMouse", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEMoveMouse",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEMoveMouse", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEScreenPath",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEScreenPath", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEWindowSize",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEWindowSize", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["MsgFind",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"MsgFind", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SystemHeadSearch",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SystemHeadSearch", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["DocFind",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"DocFind", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FECopyScreen",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FECopyScreen", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FENextSibling",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FENextSibling", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEScreenPosition",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEScreenPosition", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FileGrep",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FileGrep", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["OpsFind",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"OpsFind", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["WithOverrideDefs",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "WithOverrideDefs", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEAddResource",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEAddResource", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEDragMouse",
+          BaseStyle->"InformationLinkLF",
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEDragMouse", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FENotebooks",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FENotebooks", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEScreenShot",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEScreenShot", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FileSystemGrep",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FileSystemGrep", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["RefreshFETokens",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "RefreshFETokens", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"$FEKeyEvents", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEAttachCell",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEAttachCell", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEExport",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEExport", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEPacketBrowser",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEPacketBrowser", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FESelectCells",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FESelectCells", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndBlobIcon",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FrontEndBlobIcon", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkCallsCases",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SpelunkCallsCases", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEKeyEventsDirectory",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FEKeyEventsDirectory", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEAttachCellSpec",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEAttachCellSpec", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEFindFileOnPath",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEFindFileOnPath", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEPacketExecute",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEPacketExecute", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FESetMouseAppearance",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FESetMouseAppearance", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndFile",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FrontEndFile", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkDefinitions",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SpelunkDefinitions", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEMenuSetup",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"$FEMenuSetup", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxEdit",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxEdit", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEFormatResource",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEFormatResource", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEPackets",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEPackets", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FESetSymbolColoring",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FESetSymbolColoring", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FrontEndFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkGraph",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"SpelunkGraph", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEMenuSetupDirectory",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FEMenuSetupDirectory", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxGetOptions",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEBoxGetOptions", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEHiddenBlock",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEHiddenBlock", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEParent",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEParent", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FESiblings",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FESiblings", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndImage",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FrontEndImage", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkObject",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"SpelunkObject", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEPacketList",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"$FEPacketList", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxObject",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxObject", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEImport",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEImport", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEPreviousSibling",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEPreviousSibling", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEToFileName",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEToFileName", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndImageBrowser",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FrontEndImageBrowser", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkValues",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"SpelunkValues", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEResourceDirectory",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FEResourceDirectory", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxRead",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxRead", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEKeyEventAdd",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEKeyEventAdd", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResetKeyEvents",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResetKeyEvents", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FETokenBrowser",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FETokenBrowser", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FrontEndImageFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FrontEndImageFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkValuesCases",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SpelunkValuesCases", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEResourceFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FEResourceFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxRef",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxRef", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEKeyEventDrop",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEKeyEventDrop", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResetMenuSetup",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResetMenuSetup", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FETokens",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FETokens", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["GrepDirectory",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"GrepDirectory", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SpelunkValuesContains",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SpelunkValuesContains", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEResourceGroups",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FEResourceGroups", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxReplace",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxReplace", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FELoadResources",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FELoadResources", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResourceBrowse",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResourceBrowse", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEUnicodeCharBrowser",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEUnicodeCharBrowser", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["GrepSelect",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"GrepSelect", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SystemArgSearch",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SystemArgSearch", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FETokenList",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"$FETokenList", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxSelect",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEBoxSelect", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEMenuSetupAdd",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEMenuSetupAdd", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResourceFind",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResourceFind", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEUserBaseFile",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEUserBaseFile", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["InternalDocumentationFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "InternalDocumentationFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SystemContextSearch",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SystemContextSearch", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FEValueList",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"$FEValueList", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEBoxSetOptions",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEBoxSetOptions", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEMenuSetupDrop",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEMenuSetupDrop", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResourceGroup",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResourceGroup", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEValueBrowser",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEValueBrowser", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["InternalFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"InternalFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SystemExpressionsSearch",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SystemExpressionsSearch", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["$FrontEndDirectory",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "$FrontEndDirectory", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"]},
+        {
+         ButtonBox["FEChildren",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEChildren", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEMenuSetupGet",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEMenuSetupGet", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEResourceKeys",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "FEResourceKeys", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["FEValues",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {"FEValues", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["InternalSystemFiles",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "InternalSystemFiles", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], 
+         ButtonBox["SystemFunctionSearch",
+          BaseStyle->"InformationLinkLF",
+          
+          ButtonData:>{
+           "Info283744659527-7340464", {
+            "SystemFunctionSearch", "BTools`Utilities`"}},
+          ButtonNote->"BTools`Utilities`"], ""}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.1357142857142857]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell",
+ CellChangeTimes->{
+  3.744673927337595*^9},ExpressionUUID->"72ada6ab-aeb0-4cd6-bea0-\
+97734dea945c"],
+
+Cell[BoxData["\<\"Copies FEScreenShot\"\>"], "Print", "PrintUsage",
+ CellTags->
+  "Info283744659527-7340464",ExpressionUUID->"57b6bb00-2f58-4f86-84dd-\
+ad6061a8d98e"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"BTools`Utilities`FECopyScreen", "[", 
+          RowBox[{"BTools`Utilities`Private`screen_", ":", "Automatic"}], 
+          "]"}], ":=", 
+         RowBox[{"CopyToClipboard", "[", 
+          RowBox[{
+          "BTools`Utilities`FEScreenShot", "[", 
+           "BTools`Utilities`Private`screen", "]"}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[BTools`Utilities`FECopyScreen],
+  Editable->False]], "Print",
+ CellTags->
+  "Info283744659527-7340464",ExpressionUUID->"5d313722-20b9-4f96-a64e-\
+309dc43c5511"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Options", "[", 
+  RowBox[{"First", "@", "Kernels"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7446733143632317`*^9, 3.744673335446974*^9}, {
+  3.7446741860064764`*^9, 3.7446742327191133`*^9}, {3.7446742709208593`*^9, 
+  3.744674286623085*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"8c75e5d9-44f3-4134-89a9-e9c20e7f0332"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "First","normal",
+   "\"Nonatomic expression expected at position \
+\\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"First\\\", \\\"[\\\", \
+\\\"Kernels\\\", \\\"]\\\"}]\\).\"",2,29,3,17526152165668826839,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7446742870080795`*^9},
+ CellLabel->
+  "During evaluation of \
+In[29]:=",ExpressionUUID->"cd86d4f7-00b9-4bf4-a628-a851abab2534"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.7446742870360336`*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"e9458d22-5de9-4072-a679-4f812e279d7a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Kernels", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7446743160766706`*^9, 3.7446743210066614`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"43944f7d-714b-4c60-81b2-c7d174460e07"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.744674311642726*^9, 3.7446743217016015`*^9}},
+ CellLabel->"Out[32]=",ExpressionUUID->"0a4b5e7b-a552-4c90-a0e6-933c481c6241"]
+}, Open  ]],
+
+Cell[BoxData["GrayLevel"], "Input",
+ CellChangeTimes->{{3.7446747394167337`*^9, 
+  3.7446747414347105`*^9}},ExpressionUUID->"b2fbb989-178c-4277-b06b-\
+a14ecc339e4b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.744676244542655*^9, 3.744676246791654*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"a1f22f28-83b4-4005-a2c5-065c40e4772d"],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{3.744676247720669*^9},
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"ce3cd385-4802-4ea6-a014-3023c8104f59"]
+}, Open  ]]
 },
-WindowSize->{720, 855},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
-StyleDefinitions->"BStyle.nb"
+WindowSize->{1858, 1157},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "BStyle.nb"]]}, Visible -> False, 
+  FrontEndVersion -> "11.3 for Microsoft Windows (64-bit) (March 6, 2018)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
 ]
 (* End of Notebook Content *)
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "Info213744658808-7340464"->{
+  Cell[16827, 422, 193, 4, 31, "Print",ExpressionUUID->"40097421-6024-4679-86b5-1ed6b8a1ea2c",
+   CellTags->"Info213744658808-7340464"]},
+ "Info283744659527-7340464"->{
+  Cell[42213, 1109, 166, 3, 31, "Print",ExpressionUUID->"57b6bb00-2f58-4f86-84dd-ad6061a8d98e",
+   CellTags->"Info283744659527-7340464"],
+  Cell[42382, 1114, 1088, 29, 24, "Print",ExpressionUUID->"5d313722-20b9-4f96-a64e-309dc43c5511",
+   CellTags->"Info283744659527-7340464"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"Info213744658808-7340464", 46035, 1221},
+ {"Info283744659527-7340464", 46204, 1224}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1047, 18, 54, "Input",ExpressionUUID->"3596ebf8-ce99-4b40-83ec-644a938d3d32"],
-Cell[1608, 40, 824, 13, 32, "Input",ExpressionUUID->"82bcd510-ae34-4682-85e7-015eeeaeae7f"],
-Cell[2435, 55, 608, 12, 54, "Input",ExpressionUUID->"c7840212-1b38-40fc-bd83-2ecb3dbbd87c"],
-Cell[3046, 69, 534, 8, 32, "Input",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
+Cell[558, 20, 1047, 18, 50, "Input",ExpressionUUID->"3596ebf8-ce99-4b40-83ec-644a938d3d32"],
+Cell[1608, 40, 824, 13, 30, "Input",ExpressionUUID->"82bcd510-ae34-4682-85e7-015eeeaeae7f"],
+Cell[2435, 55, 679, 14, 30, "Input",ExpressionUUID->"c7840212-1b38-40fc-bd83-2ecb3dbbd87c"],
+Cell[3117, 71, 530, 7, 30, "Input",ExpressionUUID->"da8749cb-4565-497f-9f54-48b31bc810c5"],
 Cell[CellGroupData[{
-Cell[3605, 81, 785, 15, 75, "Input",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
-Cell[4393, 98, 3977, 72, 36, "Output",ExpressionUUID->"9dd73017-2b2a-403c-a562-2afd27183b55"]
+Cell[3672, 82, 954, 17, 50, "Input",ExpressionUUID->"14396e1f-a691-45b1-b38d-31b841bbcf75"],
+Cell[4629, 101, 4009, 71, 61, "Output",ExpressionUUID->"bbe3265c-ea3a-4a55-8ce6-4ae3d1d1a719"]
 }, Open  ]],
-Cell[8385, 173, 148, 3, 32, "Input",ExpressionUUID->"43e108e4-8d7d-4aec-94cf-325312b642f8"],
-Cell[8536, 178, 3898, 71, 32, "Input",ExpressionUUID->"35038973-eee7-4757-bd18-95eb8e2927cd"],
-Cell[12437, 251, 257, 5, 32, "Input",ExpressionUUID->"5df4eb1e-8d39-47bf-950b-5128918a37aa"],
-Cell[12697, 258, 272, 4, 32, "Input",ExpressionUUID->"7e42b294-f16a-435b-879c-e1e95b5a59bf"],
-Cell[12972, 264, 281, 5, 32, "Input",ExpressionUUID->"28a3d076-8f82-4f07-a16b-c227dc9a6dec"],
-Cell[13256, 271, 305, 5, 32, "Input",ExpressionUUID->"772f3ddf-9472-4d57-8e81-26f40a3b5d99"],
-Cell[13564, 278, 483, 11, 75, "Input",ExpressionUUID->"9cf155d8-034e-41e0-bdda-e517d652a546"],
-Cell[14050, 291, 198, 3, 32, "Input",ExpressionUUID->"49019ce2-ac6b-4842-b87c-2798b8706591"],
-Cell[14251, 296, 432, 9, 75, "Input",ExpressionUUID->"c76a8dd2-fda3-475c-837c-91c96734c0c3"],
-Cell[14686, 307, 261, 5, 32, "Input",ExpressionUUID->"142e8b09-b2a8-4cf5-b0fe-a3c8dee40d2d"],
-Cell[14950, 314, 181, 2, 32, "Input",ExpressionUUID->"362f2611-99d4-43a5-a1d4-31b24ae022c8"]
+Cell[8653, 175, 148, 3, 30, "Input",ExpressionUUID->"43e108e4-8d7d-4aec-94cf-325312b642f8"],
+Cell[8804, 180, 257, 5, 30, "Input",ExpressionUUID->"5df4eb1e-8d39-47bf-950b-5128918a37aa"],
+Cell[9064, 187, 160, 3, 30, "Input",ExpressionUUID->"4fda79f8-ca31-4b1e-b2b8-ab6e4c9ba5cb"],
+Cell[9227, 192, 186, 2, 30, "Input",ExpressionUUID->"8d5f7e5d-88be-4fea-897a-1fc85e8b849d"],
+Cell[9416, 196, 292, 5, 30, InheritFromParent,ExpressionUUID->"a7df9bce-9a55-4b7d-a7bc-cb9f6998a793"],
+Cell[9711, 203, 249, 4, 30, InheritFromParent,ExpressionUUID->"04c1d1da-7923-44e4-bc4e-5ef7d43877c6"],
+Cell[CellGroupData[{
+Cell[9985, 211, 256, 4, 30, "Input",ExpressionUUID->"177430ad-21fb-4456-a29e-2c52c4207c97"],
+Cell[10244, 217, 6341, 195, 434, "Print",ExpressionUUID->"6ee3a1dc-97ce-441f-b02b-f3416118aed5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16622, 417, 202, 3, 30, "Input",ExpressionUUID->"418186b9-aa04-4a43-9754-f37141bdb926"],
+Cell[16827, 422, 193, 4, 31, "Print",ExpressionUUID->"40097421-6024-4679-86b5-1ed6b8a1ea2c",
+ CellTags->"Info213744658808-7340464"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17057, 431, 313, 5, 30, "Input",ExpressionUUID->"daca856b-b8e5-4f5f-bf5c-0b121bc90b25"],
+Cell[CellGroupData[{
+Cell[17395, 440, 24815, 667, 386, "Print",ExpressionUUID->"72ada6ab-aeb0-4cd6-bea0-97734dea945c"],
+Cell[42213, 1109, 166, 3, 31, "Print",ExpressionUUID->"57b6bb00-2f58-4f86-84dd-ad6061a8d98e",
+ CellTags->"Info283744659527-7340464"],
+Cell[42382, 1114, 1088, 29, 24, "Print",ExpressionUUID->"5d313722-20b9-4f96-a64e-309dc43c5511",
+ CellTags->"Info283744659527-7340464"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43519, 1149, 344, 6, 30, "Input",ExpressionUUID->"8c75e5d9-44f3-4134-89a9-e9c20e7f0332"],
+Cell[43866, 1157, 442, 10, 25, "Message",ExpressionUUID->"cd86d4f7-00b9-4bf4-a628-a851abab2534"],
+Cell[44311, 1169, 168, 3, 49, "Output",ExpressionUUID->"e9458d22-5de9-4072-a679-4f812e279d7a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44516, 1177, 204, 3, 30, "Input",ExpressionUUID->"43944f7d-714b-4c60-81b2-c7d174460e07"],
+Cell[44723, 1182, 192, 3, 49, "Output",ExpressionUUID->"0a4b5e7b-a552-4c90-a0e6-933c481c6241"]
+}, Open  ]],
+Cell[44930, 1188, 165, 3, 30, "Input",ExpressionUUID->"b2fbb989-178c-4277-b06b-a14ecc339e4b"],
+Cell[CellGroupData[{
+Cell[45120, 1195, 203, 3, 30, "Input",ExpressionUUID->"a1f22f28-83b4-4005-a2c5-065c40e4772d"],
+Cell[45326, 1200, 174, 4, 24, "Print",ExpressionUUID->"ce3cd385-4802-4ea6-a014-3023c8104f59"]
+}, Open  ]]
 }
 ]
 *)
